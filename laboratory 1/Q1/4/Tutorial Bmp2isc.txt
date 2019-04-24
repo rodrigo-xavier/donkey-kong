@@ -1,18 +1,13 @@
 Através da linha de comando Powershell/Bash, acesse o diretório "laboratory1" e insira o seguinte comando:
 
-	./src/bmp2isc.exe gallery/img/eagles
+	./Q1/4/bmp2isc.exe /Q1/4/eagles
 
-Será gerado um arquivo eagles.s no diretório "/img". 
-O próximo passo é mover o arquivo para o diretório "/lib", para isso, execute o seguinte comando no shell:
-
-	-Powershell
-	Move-Item -Path .\gallery\img\eagles.s -Destination .\lib
-
+Será gerado um arquivo eagles.s no diretório "laboratory1/Q1/4/". 
 Agora é necessário editar o arquivo "eagle.s" e alterar a primeira linha:
 
 Substitua:
 
-	gallery/img/eagles: .word 320, 240
+	/Q1/4/eagles: .word 320, 240
 
 Por
 
