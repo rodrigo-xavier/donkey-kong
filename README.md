@@ -1,5 +1,15 @@
 # Donkey-kong
 
+**Nomes e matrícula**
+* Rodrigo Matias Xavier         150147431
+* Guilherme de Castro Ribeiro   140142151
+* Victor Neves Martorelli       160085012 
+*
+*
+
+
+**Organização dos diretórios do código**
+
 * src  (source)    - Local onde deve ficar o código fonte
 * doc  (document)  - Local onde deve ficar a documentação do projeto
 * obj  (objeto)    - Local onde ficam os arquivos objetos gerados no projeto
