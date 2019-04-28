@@ -5,7 +5,7 @@
 * Guilherme de Castro Ribeiro   140142151
 * Victor Neves Martorelli       160085012 
 * Brandon Dias                  120044749
-*
+* Eric do Vale de Catro         150124236
 
 
 **Organização dos diretórios do código**
