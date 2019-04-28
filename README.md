@@ -29,5 +29,5 @@
 * A issue deve ser criada diretamente do Board do projeto Laboratórios. 
 * O nome da issue deve seguir o padrão: " LNúmero-QNúmero-TNúmero-comentario adcional ". Exemplo, para o primeiro Laboratório,  para a 1ª questão, para o 1º tópico, o formato deve ser "L1-Q1-T1-Cálculo de Memória".
 * SEMPRE atribua uma issue a um desenvolvedor, normalmente, a você mesmo.
-* Antes de realizar cada Push request, é necessário fazer merge com a master e resolver os conflitos existentes, de forma que não haja retrabalho e dor de cabeça para os membros do grupo. TESTE se o código funciona após realizar o merge.
+* Antes de realizar cada Pull request, é necessário fazer merge com a master e resolver os conflitos existentes, de forma que não haja retrabalho e dor de cabeça para os membros do grupo. TESTE se o código funciona após realizar o merge.
 * Para todos os efeitos, a master está funcional, e preferivelmente NÃO se deve dar push de código falho das branchs
