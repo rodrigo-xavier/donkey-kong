@@ -4,7 +4,7 @@
 * Rodrigo Matias Xavier         150147431
 * Guilherme de Castro Ribeiro   140142151
 * Victor Neves Martorelli       160085012 
-*
+* Brandon Dias                  120044749
 *
 
 
