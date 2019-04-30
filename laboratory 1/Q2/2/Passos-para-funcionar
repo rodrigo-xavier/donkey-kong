@@ -39,13 +39,10 @@ Mensagem de Montagem: operation completed successfully.
 Ação: Executar o código
 
 Mensagem de Montagem: Error in : Instruction load access error. Go: execution terminated with errors.
-Ação:
+Ação: fazer procedimento chamar a main do início
 
-Mensagem de Montagem:
-Ação:
+Mensagem de Montagem: nenhuma, mas agora ele passa reto nos 'calls'
+Ação: substituir pelo 'jump'
 
-Mensagem de Montagem:
-Ação:
-
-Mensagem de Montagem:
-Ação:
+Mensagem de Montagem: na exibição no painel estava aparecendo '%d'. 
+Ação: Retirando da flag .string o '%d'

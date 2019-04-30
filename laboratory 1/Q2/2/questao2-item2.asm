@@ -1,9 +1,6 @@
-
-
 	.text
 	.data
 	.align	2
-
 v:
 	.word	9
 	.word	2
@@ -15,12 +12,14 @@ v:
 	.word	3
 	.word	6
 	.word	7
-	
 	.align	2
 .LC0:
-	.string	"%d\t"
+	.string	"\t"
 	.text
 	.globl	show
+	
+	# Chamando MAIN
+	j	main
 
 show:
 	addi	sp,sp,-48
@@ -39,8 +38,7 @@ show:
 	lw	a5,0(a5)
 	mv	a1,a5
 	lui	a5,%hi(.LC0)
-	addi	a0,a5,%lo(.LC0)
-	
+	addi	a0,a5,%lo(.LC0)	
 	# Testando substituição do printf
 	mv  a0,a1
    	li  a7,1
@@ -48,30 +46,27 @@ show:
    	li  a7,4
    	la  a0,.LC0
    	ecall
-	# Fim Teste
-	
+	# Fim Teste	
 	lw	a5,-20(s0)
 	addi	a5,a5,1
 	sw	a5,-20(s0)
 .L2:
 	lw	a4,-20(s0)
 	lw	a5,-40(s0)
-	blt	a4,a5,.L3
-	li	a0,10
-	
+	blt	a4,a5,.L3	
+	li	a0,10	
 	# Testando substituição do putchar
 	li  a7,11 # printa inteiro
    	ecall
-	# Fim Teste
-	
+	# Fim Teste	
 	nop
 	lw	ra,44(sp)
 	lw	s0,40(sp)
-	addi	sp,sp,48
-	jr	ra
+	addi	sp,sp,48	
+	#Voltando pra onde saiu na main
+	j	volta1
 
-	.globl	swap
-
+.globl	swap
 swap:
 	addi	sp,sp,-48
 	sw	s0,44(sp)
@@ -105,10 +100,9 @@ swap:
 	nop
 	lw	s0,44(sp)
 	addi	sp,sp,48
-	jr	ra
+	j	voltaSwap
 
-	.globl	sort
-
+.globl	sort
 sort:
 	addi	sp,sp,-48
 	sw	ra,44(sp)
@@ -126,7 +120,8 @@ sort:
 .L9:
 	lw	a1,-24(s0)
 	lw	a0,-36(s0)
-	call	swap
+	j	swap
+voltaSwap:	
 	lw	a5,-24(s0)
 	addi	a5,a5,-1
 	sw	a5,-24(s0)
@@ -157,10 +152,9 @@ sort:
 	lw	ra,44(sp)
 	lw	s0,40(sp)
 	addi	sp,sp,48
-	jr	ra
+	j	volta2
 
-	.globl	main
-
+.globl	main
 main:
 	addi	sp,sp,-16
 	sw	ra,12(sp)
@@ -169,20 +163,21 @@ main:
 	li	a1,10
 	lui	a5,%hi(v)
 	addi	a0,a5,%lo(v)
-	call	show
 	li	a1,10
 	lui	a5,%hi(v)
 	addi	a0,a5,%lo(v)
-	call	sort
+	j	sort
+volta2:	
 	li	a1,10
 	lui	a5,%hi(v)
-	addi	a0,a5,%lo(v)
-	call	show
+	addi	a0,a5,%lo(v)	
+	j	show
+volta1:	
 	li	a5,0
 	mv	a0,a5
 	lw	ra,12(sp)
 	lw	s0,8(sp)
 	addi	sp,sp,16
-	jr	ra
+
 
 
