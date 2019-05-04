@@ -1,0 +1,11 @@
+﻿Endereço do início da memória de instruções:	0x00400000
+Endereço do fim da memória de instruções:	0x0040011b
+Tamanho hexadecimal da memória de instruções:	0x00400000 - 0x0040011b + 1 = 0x11c (Cada endereço representa um byte)
+convertendo para decimal:			1x16^2 + 1x16^1 + 12x16^0 = 284 bytes
+
+Endereço do início da memória de dados:		0x10010000
+Endereço do fim da memória de dados:		0x1001002b
+Tamanho hexadecimal da memória de dados:	0x10010000 - 0x1001002b + 1 = 0x2c  (Cada endereço representa um byte)
+convertendo para decimal:			2x16^1 + 12x16^0 = 44 bytes
+
+Tamanho total do arquivo:			284 + 44 = 328 bytes
