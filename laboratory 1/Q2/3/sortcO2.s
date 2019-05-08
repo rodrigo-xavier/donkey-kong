@@ -1,11 +1,22 @@
 .data
+v:
+
+  .word 9
+  .word 2
+  .word 5
+  .word 1
+  .word 8
+  .word 2
+  .word 4
+  .word 3
+  .word 6
+  .word 7
 .LC0:
-  .string "%d\t"
-  
+  .string "\t"
 .LC1:
   .string "\n"
-.text
 
+.text
 j main
 show:
   blez a1,.L6
@@ -49,6 +60,7 @@ show:
   la  a0,.LC1
   ecall
   #######
+  jr ra
 swap:
   slli a1,a1,2
   addi a5,a1,4
@@ -58,7 +70,7 @@ swap:
   lw a4,0(a0)
   sw a3,0(a0)
   sw a4,0(a5)
-  ret
+  jr ra
 sort:
   blez a1,.L11
   li a7,0
@@ -75,6 +87,7 @@ sort:
   bgt a3,a2,.L15
   j .L16
 .L19:
+  
   lw a3,-4(a5)
   lw a2,0(a5)
   addi a0,a0,-4
@@ -96,11 +109,17 @@ sort:
 main:
   addi sp,sp,-16
   sw s0,8(sp)
+  lui s0,%hi(v)
+  addi a0,s0,%lo(v)
   li a1,10
   sw ra,12(sp)
   call show
+  lui s0,%hi(v)
+  addi a0,s0,%lo(v)
   li a1,10
   call sort
+   lui s0,%hi(v)
+  addi a0,s0,%lo(v)
   li a1,10
   call show
   lw ra,12(sp)
