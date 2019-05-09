@@ -1,0 +1,48 @@
+Passos para funcionar
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 24 column 2: ".align" directive cannot appear in text segment
+Ação: Deletar Linha
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 60 column 2: ".align" directive cannot appear in text segment
+Ação: Deletar Linha
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 97 column 2: ".align" directive cannot appear in text segment
+Ação: Deletar Linha
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 149 column 2: ".align" directive cannot appear in text segment
+Ação: Deletar Linha
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 44 column 7: Symbol "printf" not found in symbol table.
+Ação: Substituição por chamdas de sistema
+
+Mensagem de Montagem: Error in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 62 column 7: Symbol "putchar" not found in symbol table.
+Ação: Substituição por chamada de sistema
+
+Mensagem de Montagem: Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 1 column 2: RARS does not recognize the .file directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 2 column 2: RARS does not recognize the .option directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 6 column 2: RARS does not recognize the .type directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 7 column 2: RARS does not recognize the .size directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 19 column 2: RARS does not recognize the .section directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 25 column 2: RARS does not recognize the .type directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 73 column 2: RARS does not recognize the .size directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 75 column 2: RARS does not recognize the .type directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 110 column 2: RARS does not recognize the .size directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 112 column 2: RARS does not recognize the .type directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 162 column 2: RARS does not recognize the .size directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 164 column 2: RARS does not recognize the .type directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 188 column 2: RARS does not recognize the .size directive.  Ignored.
+Warning in /home/brainiac/Documents/OAC/LabOAC_version2/Donkey-Kong/laboratory 1/Q2/2/ArquivosC/riscv1.asm line 189 column 2: RARS does not recognize the .ident directive.  Ignored.
+Assemble: operation completed successfully.
+Ação: Retirando todos os Warnings excluindo as respectivas linhas
+
+Mensagem de Montagem: operation completed successfully.
+Ação: Executar o código
+
+Mensagem de Montagem: Error in : Instruction load access error. Go: execution terminated with errors.
+Ação: fazer procedimento chamar a main do início
+
+Mensagem de Montagem: nenhuma, mas agora ele passa reto nos 'calls'
+Ação: substituir pelo 'jump'
+
+Mensagem de Montagem: na exibição no painel estava aparecendo '%d'. 
+Ação: Retirando da flag .string o '%d'
