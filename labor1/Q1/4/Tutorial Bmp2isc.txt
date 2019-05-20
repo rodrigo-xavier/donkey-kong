@@ -1,0 +1,16 @@
+Através da linha de comando Powershell/Bash, acesse o diretório "laboratory1" e insira o seguinte comando:
+
+	./Q1/4/bmp2isc.exe /Q1/4/eagles
+
+Será gerado um arquivo eagles.s no diretório "laboratory1/Q1/4/". 
+Agora é necessário editar o arquivo "eagle.s" e alterar a primeira linha:
+
+Substitua:
+
+	/Q1/4/eagles: .word 320, 240
+
+Por
+
+	eagles: .word 320, 240
+
+A seguir basta abrir o Rars (v12.2), abrir o arquivo bitmap.s, conectar o display bitmap e rodar a aplicação.
