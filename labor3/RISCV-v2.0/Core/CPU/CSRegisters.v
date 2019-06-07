@@ -15,12 +15,13 @@ module CSRegisters (
     );
 
 /* CSRegister file */
-reg [31:0] registers[31:0];
+reg [31:0] registers[68:0];
+
 parameter  SPR=5'd2;                    // SP
 
 
 reg [7:0] i;
-//
+
 //initial
 // begin
 //	  for (i = 0; i <= 68; i = i + 1'b1)
@@ -33,6 +34,15 @@ reg [7:0] i;
 //		end
 //	registers[SPR] = STACK_ADDRESS;
 // end
+
+initial
+ begin
+  for (i = 0; i <= 5; i = i + 1'b1)
+   registers[i] = 32'b0;
+  
+  for (i = 64; i <= 68; i = i + 1'b1)
+   registers[i] = 32'b0;
+ end
 
 
 
