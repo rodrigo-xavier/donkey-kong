@@ -1,0 +1,207 @@
+Flow report for TopDE
+Sun Jun 09 16:01:52 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Sun Jun 09 16:01:51 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; TopDE                                       ;
+; Top-level Entity Name           ; TopDE                                       ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 5538                                        ;
+; Total pins                      ; 225                                         ;
+; Total virtual pins              ; 499                                         ;
+; Total block memory bits         ; 2,871,729                                   ;
+; Total DSP Blocks                ; 30                                          ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 3                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/09/2019 15:58:02 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; TopDE               ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++--------------------------------------+------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                                            ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 241955401865003.156010668109608                                  ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                               ; --            ; --          ; FPALU_tb       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                               ; --            ; --          ; --             ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; TopDE                                                            ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR        ; simulation/qsim                                                  ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                      ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                        ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                                  ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; Testes/FPALU_tb.v                                                ; --            ; --          ; FPALU_tb       ;
+; EDA_TEST_BENCH_FILE                  ; Testes/TopDE_tb.v                                                ; --            ; --          ; --             ;
+; EDA_TEST_BENCH_MODULE_NAME           ; FPALU_tb                                                         ; --            ; --          ; FPALU_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; TopDE                                                            ; --            ; --          ; --             ;
+; EDA_TEST_BENCH_NAME                  ; TopDE                                                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; FPALU_tb                                                         ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                                             ; --            ; --          ; eda_simulation ;
+; IP_SEARCH_PATHS                      ; c:\users\cyber\desktop\riscv-v2.0\core\adc                       ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                               ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                                ; --            ; --          ; --             ;
+; MISC_FILE                            ; ADC/joystick/synthesis/../joystick.cmp                           ; --            ; --          ; --             ;
+; MISC_FILE                            ; ADC/joystick/synthesis/../../joystick.qsys                       ; --            ; --          ; --             ;
+; MISC_FILE                            ; VGA/MemoryVGA1_bb.v                                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; VGA/VgaPll.cmp                                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; VGA/VgaPll_sim/VgaPll.vo                                         ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/add_sub.cmp                                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/add_sub_sim/add_sub.vo                                 ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/mul_s.cmp                                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/mul_s_sim/mul_s.vo                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s.cmp                                              ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s_sim/div_s_memoryC0_uid112_invTables_lutmem.hex   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s_sim/div_s_memoryC0_uid113_invTables_lutmem.hex   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s_sim/div_s_memoryC1_uid116_invTables_lutmem.hex   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s_sim/div_s_memoryC2_uid120_invTables_lutmem.hex   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/div_s_sim/div_s.vo                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/sqrt_s.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/sqrt_s_sim/sqrt_s_memoryC0_uid62_sqrtTables_lutmem.hex ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/sqrt_s_sim/sqrt_s_memoryC1_uid65_sqrtTables_lutmem.hex ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/sqrt_s_sim/sqrt_s_memoryC2_uid68_sqrtTables_lutmem.hex ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/sqrt_s_sim/sqrt_s.vo                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_s_w.cmp                                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_s_w_sim/cvt_s_w.vo                                 ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_w_s.cmp                                            ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_w_s_sim/cvt_w_s.vo                                 ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_s_wu.cmp                                           ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_s_wu_sim/cvt_s_wu.vo                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_wu_s.cmp                                           ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/cvt_wu_s_sim/cvt_wu_s.vo                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/fmax_s.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/fmax_s_sim/fmax_s.vo                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/fmin_s.cmp                                             ; --            ; --          ; --             ;
+; MISC_FILE                            ; CPU/FPULA/fmin_s_sim/fmin_s.vo                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; Tempo/PLL_Main.cmp                                               ; --            ; --          ; --             ;
+; MISC_FILE                            ; Tempo/PLL_Main_sim/PLL_Main.vo                                   ; --            ; --          ; --             ;
+; MISC_FILE                            ; AudioCODEC/PLL_Audio.cmp                                         ; --            ; --          ; --             ;
+; MISC_FILE                            ; AudioCODEC/PLL_Audio_sim/PLL_Audio.vo                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                           ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                           ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                              ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                            ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                                     ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; adc                                                              ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; vga                                                              ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; cpu/fpula                                                        ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; audiocodec                                                       ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; tempo                                                            ; --            ; --          ; --             ;
+; SEARCH_PATH                          ; memoria                                                          ; --            ; --          ; --             ;
+; SLD_FILE                             ; ADC/joystick/synthesis/joystick.debuginfo                        ; --            ; --          ; --             ;
+; SLD_INFO                             ; QSYS_NAME joystick HAS_SOPCINFO 1 GENERATION_ID 1560091943       ; --            ; joystick    ; --             ;
+; SOPCINFO_FILE                        ; ADC/joystick/synthesis/../../joystick.sopcinfo                   ; --            ; --          ; --             ;
+; SPD_FILE                             ; VGA/VgaPll.spd                                                   ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/add_sub.spd                                            ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/mul_s.spd                                              ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/div_s.spd                                              ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/sqrt_s.spd                                             ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/cvt_s_w.spd                                            ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/cvt_w_s.spd                                            ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/cvt_s_wu.spd                                           ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/cvt_wu_s.spd                                           ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/fmax_s.spd                                             ; --            ; --          ; --             ;
+; SPD_FILE                             ; CPU/FPULA/fmin_s.spd                                             ; --            ; --          ; --             ;
+; SPD_FILE                             ; Tempo/PLL_Main.spd                                               ; --            ; --          ; --             ;
+; SPD_FILE                             ; AudioCODEC/PLL_Audio.spd                                         ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                               ; --            ; --          ; --             ;
+; VERILOG_INPUT_VERSION                ; SystemVerilog_2005                                               ; Verilog_2001  ; --          ; --             ;
+; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                                              ; --            ; --          ; --             ;
++--------------------------------------+------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:03:39     ; 1.3                     ; 5160 MB             ; 00:05:05                           ;
+; Total                ; 00:03:39     ; --                      ; --                  ; 00:05:05                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-3F6T204  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off RISC-V -c TopDE
+
+
+

@@ -35,11 +35,11 @@ assign oRegDisp 	=	registers[iRegDispSelect];
 assign oVGARead 	=	registers[iVGASelect];
 
 
-																	`ifdef PIPELINE
-																		 always @(negedge iCLK or posedge iRST)
-																	`else
-																		 always @(posedge iCLK or posedge iRST)
-																	`endif
+`ifdef PIPELINE
+    always @(negedge iCLK or posedge iRST)
+`else
+    always @(posedge iCLK or posedge iRST)
+`endif
 begin
     if (iRST)
     begin // reseta o banco de registradores e pilha
@@ -47,13 +47,12 @@ begin
             registers[i] <= 32'b0;
 			registers[SPR]   <= STACK_ADDRESS;  // SP
     end
-	 
     else
-		 begin
-			i<=6'bx; // para não dar warning
-			if(iRegWrite && iWriteRegister != 5'b0)
-					registers[iWriteRegister] <= iWriteData;
-		 end
+	 begin
+		i<=6'bx; // para não dar warning
+		if(iRegWrite && iWriteRegister != 5'b0)
+				registers[iWriteRegister] <= iWriteData;
+	 end
 end
 
 endmodule

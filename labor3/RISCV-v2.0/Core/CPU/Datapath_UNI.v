@@ -37,12 +37,6 @@ module Datapath_UNI (
 
 	 // Sinais do Controle
     output [31:0] wInstr, 
-	 
-	 output [31:0] iPC,
-	 input  [1:0 ] desaligned,
-	 input  oCSRWriteData,
-	 output wCSRead1,
-	 
     input    	 	wCOrigAULA, 
 	 input 			wCOrigBULA, 
 	 input			wCRegWrite, 
@@ -72,8 +66,6 @@ module Datapath_UNI (
     output wire [ 3:0] IwByteEnable,
     output wire [31:0] IwAddress, IwWriteData,
     input  wire [31:0] IwReadData
-	 
-	 
 );
 
 
@@ -94,8 +86,6 @@ assign wRegDispSelect 	= mRegDispSelect;
 assign wVGASelect 		= mVGASelect;
 assign mRegDisp			= wRegDisp;
 assign mVGARead			= wVGARead;
-
-//assign mDesaligned      = desaligned;
 
 `ifdef RV32IMF
 assign mFRegDisp			= wFRegDisp;
@@ -130,18 +120,9 @@ initial
 // ****************************************************** 
 // Instanciacao das estruturas 	 		  						 
 	  						 
-wire [31:0] wPC4       	= PC + 32'h00000004; //Barramento de instruçao PC
+wire [31:0] wPC4       	= PC + 32'h00000004;
 wire [31:0] wBranchPC  	= PC + wImmediate;
 
-
-
-always @(*)
-	begin
-			iPC	<= PC;
-	end
-
-
-		
 wire [ 4:0] wRs1			= wInstr[19:15];
 wire [ 4:0] wRs2			= wInstr[24:20];
 wire [ 4:0] wRd			= wInstr[11: 7];
@@ -203,31 +184,6 @@ FRegisters REGISTERS1 (
 	);
 `endif
 
-
-
-
-//-----------------------------------------------------------------------------------------------------------
-
-//Banco de Registradores de exceçao 
-wire [31:0] mUcause;
-
-CSRegisters REGISTERS2 (
-    .iCLK(iCLK),
-    .iRST(iRST),
-	 
-	 .iDesaligned(wDesaligned),
-	 .iUcause(mUcause),
-	 .TOreadCSR(),
-	 .writeDataCSR(),
-	 .readCSR(),
-	 .oPCExp(),
-	 .iRegWrite()
-	 
-	);
-	
-	
-	
-	
 
 // Unidade geradora do imediato 
 wire [31:0] wImmediate;
@@ -315,6 +271,8 @@ BranchControl BC0 (
 	 .iB(wRead2),
     .oBranch(wBranch)
 );
+
+
 
 
 // ******************************************************
@@ -408,16 +366,6 @@ always @(*)
 `else
 wire [31:0] wWrite2Mem = wRead2;
 `endif
-
-
-wire [31:0] wDesaligned;	 
-always @(*)
-    case(desaligned) // Multiplexador que controla o que vai ser escrito em um registrador de ponto flutuante (origem memoria ou FPALU?)
-        2'b01:      wDesaligned <= PC;
-        2'b10:      wDesaligned <= PC;
-		  default:	  wDesaligned <= ZERO;
-    endcase
-
 
 
 

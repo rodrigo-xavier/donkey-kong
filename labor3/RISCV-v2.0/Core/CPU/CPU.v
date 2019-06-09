@@ -90,25 +90,17 @@ wire 			 wCWrite2Mem;
 wire 			 wCFPstart;
 `endif
 
-wire 	[1:0]  wDesaligned; //------------------------------
-
 
  Control_UNI CONTROL0 (
-	.iInstr(wInstr),
-	
-	.iPC(PC), //-------------------------------------
-   
-	.oOrigAULA(wCOrigAULA), 
+	.iInstr(wInstr), 
+   .oOrigAULA(wCOrigAULA), 
 	.oOrigBULA(wCOrigBULA), 
 	.oRegWrite(wCRegWrite), 
 	.oMemWrite(wCMemWrite), 
 	.oMemRead(wCMemRead),
 	.oMem2Reg(wCMem2Reg), 
 	.oOrigPC(wCOrigPC),
-	.oALUControl(wCALUControl),
-	
-	.desaligned(wDesaligned) //--------------------------------
-	
+	.oALUControl(wCALUControl)
 `ifdef RV32IMF
 	 ,
 	 .oFRegWrite(wCFRegWrite),
