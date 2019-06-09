@@ -1861,19 +1861,13 @@ set_instance_assignment -name VIRTUAL_PIN ON -to wWB_InstrType[11]
 set_instance_assignment -name VIRTUAL_PIN ON -to wWB_InstrType[12]
 set_global_assignment -name EDA_TEST_BENCH_FILE Testes/TopDE_tb.v -section_id TopDE
 set_global_assignment -name EDA_TEST_BENCH_FILE Testes/FPALU_tb.v -section_id FPALU_tb
-set_global_assignment -name IP_SEARCH_PATHS "c:\\users\\cyber\\desktop\\riscv-v2.0\\core\\adc"
 set_global_assignment -name SEARCH_PATH adc
 set_global_assignment -name SEARCH_PATH vga
 set_global_assignment -name SEARCH_PATH cpu/fpula
 set_global_assignment -name SEARCH_PATH audiocodec
 set_global_assignment -name SEARCH_PATH tempo
 set_global_assignment -name SEARCH_PATH memoria
-set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/submodules/joystick_adc_mega_0.v
-set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v
-set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/joystick.v
 set_global_assignment -name QIP_FILE ADC/joystick/synthesis/joystick.qip
-set_global_assignment -name SOURCE_FILE ADC/joystick/joystick.cmp
-set_global_assignment -name QSYS_FILE ADC/joystick.qsys
 set_global_assignment -name SDC_FILE TopDE.out.sdc
 set_global_assignment -name VERILOG_FILE TopDE.v
 set_global_assignment -name VERILOG_FILE Parametros.v

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TopDE
-Sun Jun 09 20:36:47 2019
+Sun Jun 09 20:51:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis IP Cores Summary
+  6. Analysis & Synthesis Messages
+  7. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Jun 09 20:36:47 2019           ;
+; Analysis & Synthesis Status ; Failed - Sun Jun 09 20:51:10 2019           ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; TopDE                                       ;
 ; Top-level Entity Name       ; TopDE                                       ;
@@ -156,46 +157,51 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                   ;
++--------+---------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------+-------------------------+
+; Vendor ; IP Core Name        ; Version ; Release Date ; License Type ; Entity Instance                                                                                        ; IP Include File         ;
++--------+---------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------+-------------------------+
+; N/A    ; Qsys                ; 18.1    ; N/A          ; N/A          ; |TopDE|ADC_Interface:ADCI0|joystick:joystick0                                                          ; ADC/joystick.qsys       ;
+; Altera ; altera_pll          ; 18.1    ; N/A          ; N/A          ; |TopDE|AudioCODEC_Interface:Audio0|PLL_Audio:pll1                                                      ; AudioCODEC/PLL_Audio.v  ;
+; Altera ; altera_pll          ; 18.1    ; N/A          ; N/A          ; |TopDE|CLOCK_Interface:CLOCK0|PLL_Main:PLL1                                                            ; Tempo/PLL_Main.v        ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1                                       ; CPU/FPULA/add_sub.v     ;
+; Altera ; ALTFP_COMPARE       ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1                                     ; CPU/FPULA/comp_s.v      ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1                                   ; CPU/FPULA/cvt_s_w.v     ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1                                 ; CPU/FPULA/cvt_s_wu.v    ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_w_s:cvt_w_s1                                   ; CPU/FPULA/cvt_w_s.v     ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_wu_s:cvt_wu_s1                                 ; CPU/FPULA/cvt_wu_s.v    ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1                                         ; CPU/FPULA/div_s.v       ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmax_s:fmax_s1                                     ; CPU/FPULA/fmax_s.v      ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmin_s:fmin_s1                                     ; CPU/FPULA/fmin_s.v      ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1                                         ; CPU/FPULA/mul_s.v       ;
+; Altera ; altera_fp_functions ; 18.1    ; N/A          ; N/A          ; |TopDE|CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1                                       ; CPU/FPULA/sqrt_s.v      ;
+; Altera ; RAM: 1-PORT         ; 18.1    ; N/A          ; N/A          ; |TopDE|CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0                                                  ; Memoria/UserCodeBlock.v ;
+; Altera ; RAM: 1-PORT         ; 18.1    ; N/A          ; N/A          ; |TopDE|DataMemory_Interface:MEMDATA|UserDataBlock:MB0                                                  ; Memoria/UserDataBlock.v ;
+; Altera ; RAM: 2-PORT         ; 18.1    ; N/A          ; N/A          ; |TopDE|VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0                                            ; VGA/MemoryVGA.v         ;
+; Altera ; RAM: 2-PORT         ; 18.1    ; N/A          ; N/A          ; |TopDE|VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1                                           ; VGA/MemoryVGA1.v        ;
+; Altera ; altera_pll          ; 18.1    ; N/A          ; N/A          ; |TopDE|VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx                                                    ; VGA/VgaPll.v            ;
+; Altera ; LPM_CONSTANT        ; 18.1    ; N/A          ; N/A          ; |TopDE|Break_Interface:break0|breaker:brk0                                                             ; Tempo/breaker.v         ;
+; Altera ; Signal Tap          ; N/A     ; N/A          ; Licensed     ; |TopDE|Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component ;                         ;
++--------+---------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------+-------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 09 20:35:55 2019
+    Info: Processing started: Sun Jun 09 20:50:02 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC-V -c TopDE
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12248): Elaborating Platform Designer system entity "joystick.qsys"
-Info (12250): 2019.06.09.20:36:28 Progress: Loading ADC/joystick.qsys
-Info (12250): 2019.06.09.20:36:29 Progress: Reading input file
-Info (12250): 2019.06.09.20:36:29 Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
-Info (12250): 2019.06.09.20:36:31 Progress: Parameterizing module adc_mega_0
-Info (12250): 2019.06.09.20:36:31 Progress: Building connections
-Info (12250): 2019.06.09.20:36:31 Progress: Parameterizing connections
-Info (12250): 2019.06.09.20:36:31 Progress: Validating
-Info (12250): 2019.06.09.20:36:31 Progress: Done reading input file
-Info (12250): Joystick: Generating joystick "joystick" for QUARTUS_SYNTH
-Info (12250): Adc_mega_0: Starting Generation of ADC Controller for DE-series Board
-Info (12250): Adc_mega_0: C:/intelfpga_lite/18.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/cyber/AppData/Local/Temp/alt8056_6943963795791329185.dir/0002_sopcgen/joystick_adc_mega_0.v
-Info (12250): Adc_mega_0: "joystick" instantiated altera_up_avalon_adc_mega "adc_mega_0"
-Info (12250): Joystick: Done "joystick" with 2 modules, 3 files
-Info (12249): Finished elaborating Platform Designer system entity "joystick.qsys"
-Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/submodules/joystick_adc_mega_0.v
-    Info (12023): Found entity 1: joystick_adc_mega_0 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/joystick_adc_mega_0.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v
-    Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/joystick.v
-    Info (12023): Found entity 1: joystick File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/joystick.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/joystick.v
     Info (12023): Found entity 1: joystick File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/joystick.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v
     Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file adc/joystick/synthesis/submodules/joystick_adc_mega_0.v
     Info (12023): Found entity 1: joystick_adc_mega_0 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/joystick_adc_mega_0.v Line: 22
-Warning (12019): Can't analyze file -- file ADC/joystick/joystick_inst.vhd is missing
-Warning (12019): Can't analyze file -- file ADC/joystick/joystick_inst.v is missing
-Warning (12019): Can't analyze file -- file ADC/joystick/joystick_bb.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file topde.v
     Info (12023): Found entity 1: TopDE File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 9
 Info (12021): Found 0 design units, including 0 entities, in source file parametros.v
@@ -522,20 +528,1202 @@ Info (12021): Found 1 design units, including 1 entities, in source file audioco
     Info (12023): Found entity 1: PLL_Audio_0002 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/PLL_Audio/PLL_Audio_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file testes/fpalu_tb.v
     Info (12023): Found entity 1: FPALU_tb File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Testes/FPALU_tb.v Line: 8
-Error (10228): Verilog HDL error at joystick.v(6): module "joystick" cannot be declared more than once File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/ip/joystick/joystick.v Line: 6
-Info (10499): HDL info at joystick.v(6): see declaration for object "joystick" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/joystick.v Line: 6
-Info (12021): Found 0 design units, including 0 entities, in source file db/ip/joystick/joystick.v
-Error (10228): Verilog HDL error at altera_up_avalon_adv_adc.v(23): module "altera_up_avalon_adv_adc" cannot be declared more than once File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/ip/joystick/submodules/altera_up_avalon_adv_adc.v Line: 23
-Info (10499): HDL info at altera_up_avalon_adv_adc.v(23): see declaration for object "altera_up_avalon_adv_adc" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v Line: 23
-Info (12021): Found 0 design units, including 0 entities, in source file db/ip/joystick/submodules/altera_up_avalon_adv_adc.v
-Info (15248): File "c:/users/cyber/desktop/donkey-kong/labor3/riscv-v2.0/core/db/ip/joystick/submodules/joystick_adc_mega_0.v" is a duplicate of already analyzed file "C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/joystick_adc_mega_0.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
-Info (12021): Found 0 design units, including 0 entities, in source file db/ip/joystick/submodules/joystick_adc_mega_0.v
+Warning (10236): Verilog HDL Implicit Net warning at CPU.v(99): created implicit net for "PC" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/CPU.v Line: 99
+Info (12127): Elaborating entity "TopDE" for the top level hierarchy
+Info (12128): Elaborating entity "CLOCK_Interface" for hierarchy "CLOCK_Interface:CLOCK0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 422
+Info (12128): Elaborating entity "PLL_Main" for hierarchy "CLOCK_Interface:CLOCK0|PLL_Main:PLL1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/CLOCK_Interface.v Line: 59
+Info (12128): Elaborating entity "PLL_Main_0002" for hierarchy "CLOCK_Interface:CLOCK0|PLL_Main:PLL1|PLL_Main_0002:pll_main_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/PLL_Main.v Line: 30
+Info (12128): Elaborating entity "altera_pll" for hierarchy "CLOCK_Interface:CLOCK0|PLL_Main:PLL1|PLL_Main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/PLL_Main/PLL_Main_0002.v Line: 100
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "CLOCK_Interface:CLOCK0|PLL_Main:PLL1|PLL_Main_0002:pll_main_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/PLL_Main/PLL_Main_0002.v Line: 100
+Info (12133): Instantiated megafunction "CLOCK_Interface:CLOCK0|PLL_Main:PLL1|PLL_Main_0002:pll_main_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/PLL_Main/PLL_Main_0002.v Line: 100
+    Info (12134): Parameter "fractional_vco_multiplier" = "true"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "6"
+    Info (12134): Parameter "output_clock_frequency0" = "25.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "100.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "150.000000 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "200.000000 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "17.910447 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "27.272727 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "mono" for hierarchy "CLOCK_Interface:CLOCK0|mono:Timer10" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/CLOCK_Interface.v Line: 77
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 489
+Info (12128): Elaborating entity "Control_UNI" for hierarchy "CPU:CPU0|Control_UNI:CONTROL0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/CPU.v Line: 123
+Info (12128): Elaborating entity "Datapath_UNI" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/CPU.v Line: 194
+Info (10264): Verilog HDL Case Statement information at Datapath_UNI.v(415): all case item expressions in this case statement are onehot File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 415
+Warning (10034): Output port "wCSRead1" at Datapath_UNI.v(44) has no driver File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 44
+Info (12128): Elaborating entity "Registers" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|Registers:REGISTERS0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 180
+Info (12128): Elaborating entity "FRegisters" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FRegisters:REGISTERS1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 203
+Info (12128): Elaborating entity "ImmGen" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|ImmGen:IMMGEN0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 238
+Info (12128): Elaborating entity "ALU" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|ALU:ALU0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 251
+Info (12128): Elaborating entity "FPALU" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 267
+Info (12128): Elaborating entity "add_sub" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 200
+Info (12128): Elaborating entity "add_sub_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub.v Line: 24
+Warning (10036): Verilog HDL or VHDL warning at add_sub_0002.vhd(53): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 53
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist10_sigB_uid60_fpAddSubTest_ieeeAdd_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 431
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:fracBAddOpPostXor_uid90_fpAddSubTest_ieeeAdd_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 689
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist25_frac_aSig_uid31_fpAddSubTest_ieeeAdd_b_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 701
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist1_rVStage_uid168_lzCountVal_uid94_fpAddSubTest_ieeeAdd_merged_bit_select_c_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 779
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist13_sigA_uid59_fpAddSubTest_ieeeAdd_b_3" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 851
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist26_exp_aSig_uid30_fpAddSubTest_ieeeAdd_b_3" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 881
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist9_effSub_uid61_fpAddSubTest_ieeeAdd_q_4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 997
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist2_vStage_uid163_lzCountVal_uid94_fpAddSubTest_ieeeAdd_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 1071
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist8_fracGRS_uid93_fpAddSubTest_ieeeAdd_q_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 1086
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|add_sub:add1|add_sub_0002:add_sub_inst|dspba_delay:redist6_fracRPreExc_uid125_fpAddSubTest_ieeeAdd_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/add_sub/add_sub_0002.vhd Line: 1441
+Info (12128): Elaborating entity "mul_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 210
+Info (12128): Elaborating entity "mul_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at mul_s_0002.vhd(150): object "prodXY_uid94_prod_uid47_fpMulTest_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 150
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:fracXIsZero_uid17_fpMulTest_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 190
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:redist7_fracXIsZero_uid17_fpMulTest_q_3" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 195
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:prodXY_uid94_prod_uid47_fpMulTest_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 365
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:redist3_expSum_uid44_fpMulTest_q_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 396
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:redist0_expRPreExc_uid61_fpMulTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 442
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|mul_s:mul1|mul_s_0002:mul_s_inst|dspba_delay:redist1_fracRPreExc_uid59_fpMulTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/mul_s/mul_s_0002.vhd Line: 563
+Info (12128): Elaborating entity "div_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 220
+Info (12128): Elaborating entity "div_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at div_s_0002.vhd(206): object "prodXY_uid139_prodDivPreNormProd_uid60_fpDivTest_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 206
+Warning (10036): Verilog HDL or VHDL warning at div_s_0002.vhd(225): object "prodXY_uid142_pT1_uid127_invPolyEval_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 225
+Warning (10036): Verilog HDL or VHDL warning at div_s_0002.vhd(245): object "prodXY_uid145_pT2_uid133_invPolyEval_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 245
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:fracXIsZero_uid39_fpDivTest_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 338
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist10_fracXIsZero_uid39_fpDivTest_q_9" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 343
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist17_fracX_uid10_fpDivTest_b_6_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 444
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist17_fracX_uid10_fpDivTest_b_6_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 444
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist17_fracX_uid10_fpDivTest_b_6_mem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 444
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "width_a" = "23"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "5"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "23"
+    Info (12134): Parameter "widthad_b" = "3"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "5"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_aclr_b" = "CLEAR1"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "MLAB"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "TRUE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_p914.tdf
+    Info (12023): Found entity 1: altera_syncram_p914 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_p914.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_p914" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist17_fracX_uid10_fpDivTest_b_6_mem_dmem|altera_syncram_p914:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_qmb4.tdf
+    Info (12023): Found entity 1: altsyncram_qmb4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_qmb4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_qmb4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist17_fracX_uid10_fpDivTest_b_6_mem_dmem|altera_syncram_p914:auto_generated|altsyncram_qmb4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_p914.tdf Line: 37
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist13_fracXIsZero_uid25_fpDivTest_q_3" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 490
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist2_lOAdded_uid58_fpDivTest_q_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 587
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC2_uid120_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 604
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC2_uid120_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 604
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC2_uid120_invTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 604
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "div_s_0002_memoryC2_uid120_invTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_l054.tdf
+    Info (12023): Found entity 1: altera_syncram_l054 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_l054.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_l054" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC2_uid120_invTables_lutmem_dmem|altera_syncram_l054:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1vc4.tdf
+    Info (12023): Found entity 1: altsyncram_1vc4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_1vc4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_1vc4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC2_uid120_invTables_lutmem_dmem|altera_syncram_l054:auto_generated|altsyncram_1vc4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_l054.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist4_yPE_uid52_fpDivTest_b_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 634
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:prodXY_uid142_pT1_uid127_invPolyEval_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 673
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist6_yAddr_uid51_fpDivTest_b_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 688
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC1_uid116_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 696
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC1_uid116_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 696
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC1_uid116_invTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 696
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "20"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "div_s_0002_memoryC1_uid116_invTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_o054.tdf
+    Info (12023): Found entity 1: altera_syncram_o054 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_o054.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_o054" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC1_uid116_invTables_lutmem_dmem|altera_syncram_o054:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4vc4.tdf
+    Info (12023): Found entity 1: altsyncram_4vc4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_4vc4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_4vc4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC1_uid116_invTables_lutmem_dmem|altera_syncram_o054:auto_generated|altsyncram_4vc4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_o054.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:prodXY_uid145_pT2_uid133_invPolyEval_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 775
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid113_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 795
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid113_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 795
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid113_invTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 795
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "11"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "div_s_0002_memoryC0_uid113_invTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_k054.tdf
+    Info (12023): Found entity 1: altera_syncram_k054 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_k054.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_k054" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid113_invTables_lutmem_dmem|altera_syncram_k054:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vc4.tdf
+    Info (12023): Found entity 1: altsyncram_0vc4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_0vc4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_0vc4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid113_invTables_lutmem_dmem|altera_syncram_k054:auto_generated|altsyncram_0vc4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_k054.tdf Line: 32
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid112_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 825
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid112_invTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 825
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid112_invTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 825
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "20"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "div_s_0002_memoryC0_uid112_invTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_j054.tdf
+    Info (12023): Found entity 1: altera_syncram_j054 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_j054.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_j054" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid112_invTables_lutmem_dmem|altera_syncram_j054:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vuc4.tdf
+    Info (12023): Found entity 1: altsyncram_vuc4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_vuc4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_vuc4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:memoryC0_uid112_invTables_lutmem_dmem|altera_syncram_j054:auto_generated|altsyncram_vuc4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_j054.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:prodXY_uid139_prodDivPreNormProd_uid60_fpDivTest_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 906
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist16_fracYZero_uid15_fpDivTest_q_6" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 925
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist8_expXmY_uid47_fpDivTest_q_8_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1047
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist8_expXmY_uid47_fpDivTest_q_8_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1047
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist8_expXmY_uid47_fpDivTest_q_8_mem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1047
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "width_a" = "9"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "5"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "9"
+    Info (12134): Parameter "widthad_b" = "3"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "5"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_aclr_b" = "CLEAR1"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "MLAB"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "TRUE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_1714.tdf
+    Info (12023): Found entity 1: altera_syncram_1714 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_1714.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_1714" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist8_expXmY_uid47_fpDivTest_q_8_mem_dmem|altera_syncram_1714:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2kb4.tdf
+    Info (12023): Found entity 1: altsyncram_2kb4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_2kb4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2kb4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|altera_syncram:redist8_expXmY_uid47_fpDivTest_q_8_mem_dmem|altera_syncram_1714:auto_generated|altsyncram_2kb4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_1714.tdf Line: 37
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist8_expXmY_uid47_fpDivTest_q_8_outputreg" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1087
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist0_excRPreExc_uid79_fpDivTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1130
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|div_s:div1|div_s_0002:div_s_inst|dspba_delay:redist1_fracRPreExc_uid78_fpDivTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/div_s/div_s_0002.vhd Line: 1254
+Info (12128): Elaborating entity "sqrt_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 229
+Info (12128): Elaborating entity "sqrt_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at sqrt_s_0002.vhd(50): object "GND_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 50
+Warning (10036): Verilog HDL or VHDL warning at sqrt_s_0002.vhd(151): object "prodXY_uid87_pT1_uid75_invPolyEval_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 151
+Warning (10036): Verilog HDL or VHDL warning at sqrt_s_0002.vhd(172): object "prodXY_uid90_pT2_uid81_invPolyEval_cma_reset" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 172
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:redist6_signX_uid7_fpSqrtTest_b_6" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 228
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:redist7_expX_uid6_fpSqrtTest_b_6_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 312
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:redist7_expX_uid6_fpSqrtTest_b_6_mem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 312
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:redist7_expX_uid6_fpSqrtTest_b_6_mem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 312
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "5"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "8"
+    Info (12134): Parameter "widthad_b" = "3"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "5"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_aclr_b" = "CLEAR1"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "MLAB"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "TRUE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_v614.tdf
+    Info (12023): Found entity 1: altera_syncram_v614 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_v614.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_v614" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:redist7_expX_uid6_fpSqrtTest_b_6_mem_dmem|altera_syncram_v614:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0kb4.tdf
+    Info (12023): Found entity 1: altsyncram_0kb4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_0kb4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_0kb4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:redist7_expX_uid6_fpSqrtTest_b_6_mem_dmem|altera_syncram_v614:auto_generated|altsyncram_0kb4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_v614.tdf Line: 37
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC2_uid68_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 383
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC2_uid68_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 383
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC2_uid68_sqrtTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 383
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "12"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "sqrt_s_0002_memoryC2_uid68_sqrtTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_o754.tdf
+    Info (12023): Found entity 1: altera_syncram_o754 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_o754.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_o754" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC2_uid68_sqrtTables_lutmem_dmem|altera_syncram_o754:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_46d4.tdf
+    Info (12023): Found entity 1: altsyncram_46d4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_46d4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_46d4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC2_uid68_sqrtTables_lutmem_dmem|altera_syncram_o754:auto_generated|altsyncram_46d4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_o754.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:redist0_yForPe_uid36_fpSqrtTest_b_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 414
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:prodXY_uid87_pT1_uid75_invPolyEval_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 453
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:redist2_yAddr_uid35_fpSqrtTest_b_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 465
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC1_uid65_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 473
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC1_uid65_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 473
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC1_uid65_sqrtTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 473
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "21"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "sqrt_s_0002_memoryC1_uid65_sqrtTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_k754.tdf
+    Info (12023): Found entity 1: altera_syncram_k754 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_k754.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_k754" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC1_uid65_sqrtTables_lutmem_dmem|altera_syncram_k754:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_06d4.tdf
+    Info (12023): Found entity 1: altsyncram_06d4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_06d4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_06d4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC1_uid65_sqrtTables_lutmem_dmem|altera_syncram_k754:auto_generated|altsyncram_06d4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_k754.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:prodXY_uid90_pT2_uid81_invPolyEval_cma_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 552
+Info (12128): Elaborating entity "altera_syncram" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC0_uid62_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 572
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC0_uid62_sqrtTables_lutmem_dmem" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 572
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC0_uid62_sqrtTables_lutmem_dmem" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 572
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "width_a" = "29"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad2_a" = "1"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "widthad2_b" = "1"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "NORMAL"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "width_eccstatus" = "2"
+    Info (12134): Parameter "byte_size" = "0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "sim_show_memory_data_in_port_b_layout" = "OFF"
+    Info (12134): Parameter "outdata_sclr_a" = "NONE"
+    Info (12134): Parameter "outdata_sclr_b" = "NONE"
+    Info (12134): Parameter "enable_ecc_encoder_bypass" = "FALSE"
+    Info (12134): Parameter "enable_force_to_zero" = "FALSE"
+    Info (12134): Parameter "enable_coherent_read" = "FALSE"
+    Info (12134): Parameter "width_eccencparity" = "8"
+    Info (12134): Parameter "init_file" = "sqrt_s_0002_memoryC0_uid62_sqrtTables_lutmem.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altera_syncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_syncram_p754.tdf
+    Info (12023): Found entity 1: altera_syncram_p754 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_p754.tdf Line: 24
+Info (12128): Elaborating entity "altera_syncram_p754" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC0_uid62_sqrtTables_lutmem_dmem|altera_syncram_p754:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_syncram.tdf Line: 124
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_56d4.tdf
+    Info (12023): Found entity 1: altsyncram_56d4 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_56d4.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_56d4" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|altera_syncram:memoryC0_uid62_sqrtTables_lutmem_dmem|altera_syncram_p754:auto_generated|altsyncram_56d4:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altera_syncram_p754.tdf Line: 32
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:fracXIsZero_uid15_fpSqrtTest_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 685
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|sqrt_s:sqrt1|sqrt_s_0002:sqrt_s_inst|dspba_delay:redist5_fracXIsZero_uid15_fpSqrtTest_q_6" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/sqrt_s/sqrt_s_0002.vhd Line: 690
+Info (12128): Elaborating entity "comp_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 243
+Info (12128): Elaborating entity "comp_s_altfp_compare_q6c" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 489
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 315
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 315
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr1" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 315
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_type" = "lpm_compare"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_l4j.tdf
+    Info (12023): Found entity 1: cmpr_l4j File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/cmpr_l4j.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_l4j" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr1|cmpr_l4j:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 369
+Info (12130): Elaborated megafunction instantiation "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 369
+Info (12133): Instantiated megafunction "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr4" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/comp_s.v Line: 369
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_width" = "7"
+    Info (12134): Parameter "lpm_type" = "lpm_compare"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_k4j.tdf
+    Info (12023): Found entity 1: cmpr_k4j File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/cmpr_k4j.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_k4j" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|comp_s:comp_s1|comp_s_altfp_compare_q6c:comp_s_altfp_compare_q6c_component|lpm_compare:cmpr4|cmpr_k4j:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "cvt_s_w" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 252
+Info (12128): Elaborating entity "cvt_s_w_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at cvt_s_w_0002.vhd(51): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 51
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:redist7_signX_uid6_fxpToFPTest_b_4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 172
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:redist6_y_uid9_fxpToFPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 247
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:vCount_uid44_lzcShifterZ1_uid10_fxpToFPTest_delay" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 253
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:redist0_fracRnd_uid15_fxpToFPTest_merged_bit_select_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 416
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:redist4_expR_uid26_fxpToFPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 433
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_w:cvt_s_w1|cvt_s_w_0002:cvt_s_w_inst|dspba_delay:redist5_fracR_uid25_fxpToFPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_w/cvt_s_w_0002.vhd Line: 486
+Info (12128): Elaborating entity "cvt_w_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_w_s:cvt_w_s1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 261
+Info (12128): Elaborating entity "cvt_w_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_w_s:cvt_w_s1|cvt_w_s_0002:cvt_w_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_w_s.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at cvt_w_s_0002.vhd(51): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_w_s/cvt_w_s_0002.vhd Line: 51
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_w_s:cvt_w_s1|cvt_w_s_0002:cvt_w_s_inst|dspba_delay:redist2_signX_uid25_fpToFxPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_w_s/cvt_w_s_0002.vhd Line: 172
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_w_s:cvt_w_s1|cvt_w_s_0002:cvt_w_s_inst|dspba_delay:redist5_frac_x_uid10_fpToFxPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_w_s/cvt_w_s_0002.vhd Line: 255
+Info (12128): Elaborating entity "cvt_s_wu" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 270
+Info (12128): Elaborating entity "cvt_s_wu_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1|cvt_s_wu_0002:cvt_s_wu_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_wu.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at cvt_s_wu_0002.vhd(51): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_wu/cvt_s_wu_0002.vhd Line: 51
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1|cvt_s_wu_0002:cvt_s_wu_inst|dspba_delay:redist4_vCount_uid40_lzcShifterZ1_uid6_fxpToFPTest_q_2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_wu/cvt_s_wu_0002.vhd Line: 316
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1|cvt_s_wu_0002:cvt_s_wu_inst|dspba_delay:redist2_vCount_uid52_lzcShifterZ1_uid6_fxpToFPTest_q_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_wu/cvt_s_wu_0002.vhd Line: 326
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_s_wu:cvt_s_wu1|cvt_s_wu_0002:cvt_s_wu_inst|dspba_delay:redist5_expFracRnd_uid12_fxpToFPTest_q_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_s_wu/cvt_s_wu_0002.vhd Line: 384
+Info (12128): Elaborating entity "cvt_wu_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_wu_s:cvt_wu_s1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 279
+Info (12128): Elaborating entity "cvt_wu_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_wu_s:cvt_wu_s1|cvt_wu_s_0002:cvt_wu_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_wu_s.v Line: 20
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_wu_s:cvt_wu_s1|cvt_wu_s_0002:cvt_wu_s_inst|dspba_delay:redist0_rightShiftStageSel5Dto4_uid62_rightShiferNoStickyOut_uid39_fpToFxPTest_merged_bit_select_d_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_wu_s/cvt_wu_s_0002.vhd Line: 316
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|cvt_wu_s:cvt_wu_s1|cvt_wu_s_0002:cvt_wu_s_inst|dspba_delay:redist1_signX_uid25_fpToFxPTest_b_1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/cvt_wu_s/cvt_wu_s_0002.vhd Line: 350
+Info (12128): Elaborating entity "fmax_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmax_s:fmax_s1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 289
+Info (12128): Elaborating entity "fmax_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmax_s:fmax_s1|fmax_s_0002:fmax_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/fmax_s.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at fmax_s_0002.vhd(52): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/fmax_s/fmax_s_0002.vhd Line: 52
+Info (12128): Elaborating entity "fmin_s" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmin_s:fmin_s1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/FPALU.v Line: 299
+Info (12128): Elaborating entity "fmin_s_0002" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|FPALU:FPALU0|fmin_s:fmin_s1|fmin_s_0002:fmin_s_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/fmin_s.v Line: 22
+Warning (10036): Verilog HDL or VHDL warning at fmin_s_0002.vhd(52): object "VCC_q" assigned a value but never read File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FPULA/fmin_s/fmin_s_0002.vhd Line: 52
+Info (12128): Elaborating entity "MemStore" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|MemStore:MEMSTORE0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 283
+Info (12128): Elaborating entity "MemLoad" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|MemLoad:MEMLOAD0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 305
+Info (12128): Elaborating entity "BranchControl" for hierarchy "CPU:CPU0|Datapath_UNI:DATAPATH0|BranchControl:BC0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 317
+Info (12128): Elaborating entity "DataMemory_Interface" for hierarchy "DataMemory_Interface:MEMDATA" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 521
+Info (12128): Elaborating entity "UserDataBlock" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/DataMemory_Interface.v Line: 28
+Info (12128): Elaborating entity "altsyncram" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserDataBlock.v Line: 91
+Info (12130): Elaborated megafunction instantiation "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserDataBlock.v Line: 91
+Info (12133): Instantiated megafunction "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserDataBlock.v Line: 91
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "de1_data.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=DATA"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "32768"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "15"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cas1.tdf
+    Info (12023): Found entity 1: altsyncram_cas1 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_cas1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_cas1" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_npj2.tdf
+    Info (12023): Found entity 1: altsyncram_npj2 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_npj2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_npj2" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|altsyncram_npj2:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_cas1.tdf Line: 38
+Warning (113028): 31744 out of 32768 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/de1_data.mif Line: 1
+    Warning (113027): Addresses ranging from 1024 to 32767 are not initialized File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/de1_data.mif Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
+    Info (12023): Found entity 1: decode_8la File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_8la.tdf Line: 22
+Info (12128): Elaborating entity "decode_8la" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|altsyncram_npj2:altsyncram1|decode_8la:decode4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_npj2.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
+    Info (12023): Found entity 1: decode_11a File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_11a.tdf Line: 22
+Info (12128): Elaborating entity "decode_11a" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|altsyncram_npj2:altsyncram1|decode_11a:rden_decode_b" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_npj2.tdf Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_5hb.tdf
+    Info (12023): Found entity 1: mux_5hb File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/mux_5hb.tdf Line: 22
+Info (12128): Elaborating entity "mux_5hb" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|altsyncram_npj2:altsyncram1|mux_5hb:mux6" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_npj2.tdf Line: 55
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_cas1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_cas1.tdf Line: 39
+Info (12133): Instantiated megafunction "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_cas1.tdf Line: 39
+    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1145132097"
+    Info (12134): Parameter "NUMWORDS" = "32768"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
+    Info (12134): Parameter "WIDTH_WORD" = "32"
+    Info (12134): Parameter "WIDTHAD" = "15"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "DataMemory_Interface:MEMDATA|UserDataBlock:MB0|altsyncram:altsyncram_component|altsyncram_cas1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
+Info (12128): Elaborating entity "CodeMemory_Interface" for hierarchy "CodeMemory_Interface:MEMCODE" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 533
+Info (12128): Elaborating entity "UserCodeBlock" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/CodeMemory_Interface.v Line: 27
+Info (12128): Elaborating entity "altsyncram" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserCodeBlock.v Line: 91
+Info (12130): Elaborated megafunction instantiation "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserCodeBlock.v Line: 91
+Info (12133): Instantiated megafunction "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/UserCodeBlock.v Line: 91
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "de1_text.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=TEXT"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16384"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "14"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sft1.tdf
+    Info (12023): Found entity 1: altsyncram_sft1 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_sft1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_sft1" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_oqj2.tdf
+    Info (12023): Found entity 1: altsyncram_oqj2 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_oqj2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_oqj2" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|altsyncram_oqj2:altsyncram1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_sft1.tdf Line: 38
+Warning (113028): 15087 out of 16384 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/de1_text.mif Line: 1
+    Warning (113027): Addresses ranging from 1297 to 16383 are not initialized File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/de1_text.mif Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
+    Info (12023): Found entity 1: decode_5la File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_5la.tdf Line: 22
+Info (12128): Elaborating entity "decode_5la" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|altsyncram_oqj2:altsyncram1|decode_5la:decode4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_oqj2.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u0a.tdf
+    Info (12023): Found entity 1: decode_u0a File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_u0a.tdf Line: 22
+Info (12128): Elaborating entity "decode_u0a" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|altsyncram_oqj2:altsyncram1|decode_u0a:rden_decode_b" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_oqj2.tdf Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_2hb.tdf
+    Info (12023): Found entity 1: mux_2hb File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/mux_2hb.tdf Line: 22
+Info (12128): Elaborating entity "mux_2hb" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|altsyncram_oqj2:altsyncram1|mux_2hb:mux6" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_oqj2.tdf Line: 55
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_sft1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_sft1.tdf Line: 39
+Info (12133): Instantiated megafunction "CodeMemory_Interface:MEMCODE|UserCodeBlock:MB0|altsyncram:altsyncram_component|altsyncram_sft1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_sft1.tdf Line: 39
+    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1413830740"
+    Info (12134): Parameter "NUMWORDS" = "16384"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
+    Info (12134): Parameter "WIDTH_WORD" = "32"
+    Info (12134): Parameter "WIDTHAD" = "14"
+Info (12128): Elaborating entity "Display7_Interface" for hierarchy "Display7_Interface:Display70" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 564
+Info (12128): Elaborating entity "Decoder7" for hierarchy "Display7_Interface:Display70|Decoder7:Dec0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Display7/Display7_Interface.v Line: 10
+Info (12128): Elaborating entity "STOPWATCH_Interface" for hierarchy "STOPWATCH_Interface:stopwatch0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 579
+Info (12128): Elaborating entity "Stopwatch_divider_clk" for hierarchy "STOPWATCH_Interface:stopwatch0|Stopwatch_divider_clk:divider" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/stopwatch/STOPWATCH_Interface.v Line: 22
+Info (12128): Elaborating entity "LFSR_interface" for hierarchy "LFSR_interface:lfsr0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 594
+Info (12128): Elaborating entity "LFSR_word" for hierarchy "LFSR_interface:lfsr0|LFSR_word:lfsr" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/lfsr/lfsr_interface.v Line: 21
+Info (12128): Elaborating entity "Break_Interface" for hierarchy "Break_Interface:break0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 614
+Info (12128): Elaborating entity "breaker" for hierarchy "Break_Interface:break0|breaker:brk0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/Break_Interface.v Line: 22
+Info (12128): Elaborating entity "breaker_lpm_constant_kva" for hierarchy "Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/breaker.v Line: 83
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component|sld_mod_ram_rom:mgl_prim1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/breaker.v Line: 55
+Info (12130): Elaborated megafunction instantiation "Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component|sld_mod_ram_rom:mgl_prim1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/breaker.v Line: 55
+Info (12133): Instantiated megafunction "Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component|sld_mod_ram_rom:mgl_prim1" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/breaker.v Line: 55
+    Info (12134): Parameter "cvalue" = "00000000000000000000000000000000"
+    Info (12134): Parameter "is_data_in_ram" = "0"
+    Info (12134): Parameter "is_readable" = "0"
+    Info (12134): Parameter "node_name" = "1112689456"
+    Info (12134): Parameter "numwords" = "1"
+    Info (12134): Parameter "shift_count_bits" = "6"
+    Info (12134): Parameter "width_word" = "32"
+    Info (12134): Parameter "widthad" = "1"
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "Break_Interface:break0|breaker:brk0|breaker_lpm_constant_kva:breaker_lpm_constant_kva_component|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 485
+Info (12128): Elaborating entity "VGA_Interface" for hierarchy "VGA_Interface:VGA0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 648
+Info (12128): Elaborating entity "VgaAdapter" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VGA_Interface.v Line: 54
+Info (12128): Elaborating entity "VgaPll" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaAdapter.v Line: 77
+Info (12128): Elaborating entity "VgaPll_0002" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx|VgaPll_0002:vgapll_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaPll.v Line: 22
+Info (12128): Elaborating entity "altera_pll" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx|VgaPll_0002:vgapll_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaPll/VgaPll_0002.v Line: 88
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx|VgaPll_0002:vgapll_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaPll/VgaPll_0002.v Line: 88
+Info (12133): Instantiated megafunction "VGA_Interface:VGA0|VgaAdapter:VGA0|VgaPll:xx|VgaPll_0002:vgapll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaPll/VgaPll_0002.v Line: 88
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "2"
+    Info (12134): Parameter "output_clock_frequency0" = "25.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "100.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "MemoryVGA" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaAdapter.v Line: 142
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA.v Line: 102
+Info (12130): Elaborated megafunction instantiation "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA.v Line: 102
+Info (12133): Instantiated megafunction "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA.v Line: 102
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "./VGA/frame0.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "19200"
+    Info (12134): Parameter "numwords_b" = "19200"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "15"
+    Info (12134): Parameter "widthad_b" = "15"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "4"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_81p2.tdf
+    Info (12023): Found entity 1: altsyncram_81p2 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_81p2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_81p2" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component|altsyncram_81p2:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
+    Info (12023): Found entity 1: decode_7la File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_7la.tdf Line: 22
+Info (12128): Elaborating entity "decode_7la" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component|altsyncram_81p2:auto_generated|decode_7la:decode2" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_81p2.tdf Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
+    Info (12023): Found entity 1: decode_01a File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/decode_01a.tdf Line: 22
+Info (12128): Elaborating entity "decode_01a" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component|altsyncram_81p2:auto_generated|decode_01a:rden_decode_a" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_81p2.tdf Line: 54
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_4hb.tdf
+    Info (12023): Found entity 1: mux_4hb File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/mux_4hb.tdf Line: 22
+Info (12128): Elaborating entity "mux_4hb" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA:memVGA0|altsyncram:altsyncram_component|altsyncram_81p2:auto_generated|mux_4hb:mux4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_81p2.tdf Line: 56
+Info (12128): Elaborating entity "MemoryVGA1" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaAdapter.v Line: 157
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA1.v Line: 102
+Info (12130): Elaborated megafunction instantiation "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA1.v Line: 102
+Info (12133): Instantiated megafunction "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/MemoryVGA1.v Line: 102
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "./VGA/frame1.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "19200"
+    Info (12134): Parameter "numwords_b" = "19200"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "15"
+    Info (12134): Parameter "widthad_b" = "15"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "4"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_91p2.tdf
+    Info (12023): Found entity 1: altsyncram_91p2 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_91p2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_91p2" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|MemoryVGA1:memVGA1|altsyncram:altsyncram_component|altsyncram_91p2:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "RegDisplay" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|RegDisplay:RegDisp0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/VgaAdapter.v Line: 185
+Info (12128): Elaborating entity "HexFont" for hierarchy "VGA_Interface:VGA0|VgaAdapter:VGA0|RegDisplay:RegDisp0|HexFont:HexF0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/VGA/RegDisplay.v Line: 65
+Info (12128): Elaborating entity "TecladoPS2_Interface" for hierarchy "TecladoPS2_Interface:TecladoPS20" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 671
+Info (12128): Elaborating entity "oneshot" for hierarchy "TecladoPS2_Interface:TecladoPS20|oneshot:pulser" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/PS2/TecladoPS2_Interface.v Line: 28
+Info (12128): Elaborating entity "keyboard" for hierarchy "TecladoPS2_Interface:TecladoPS20|keyboard:kbd" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/PS2/TecladoPS2_Interface.v Line: 38
+Info (12128): Elaborating entity "scan2ascii" for hierarchy "TecladoPS2_Interface:TecladoPS20|scan2ascii:s2a" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/PS2/TecladoPS2_Interface.v Line: 124
+Info (12128): Elaborating entity "keyscan" for hierarchy "TecladoPS2_Interface:TecladoPS20|keyscan:keys1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/PS2/TecladoPS2_Interface.v Line: 134
+Info (12128): Elaborating entity "AudioCODEC_Interface" for hierarchy "AudioCODEC_Interface:Audio0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 705
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "AudioCODEC_Interface:Audio0|Reset_Delay:r0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/AudioCODEC_Interface.v Line: 32
+Info (12128): Elaborating entity "PLL_Audio" for hierarchy "AudioCODEC_Interface:Audio0|PLL_Audio:pll1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/AudioCODEC_Interface.v Line: 61
+Info (12128): Elaborating entity "PLL_Audio_0002" for hierarchy "AudioCODEC_Interface:Audio0|PLL_Audio:pll1|PLL_Audio_0002:pll_audio_inst" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/PLL_Audio.v Line: 22
+Info (12128): Elaborating entity "altera_pll" for hierarchy "AudioCODEC_Interface:Audio0|PLL_Audio:pll1|PLL_Audio_0002:pll_audio_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/PLL_Audio/PLL_Audio_0002.v Line: 88
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "AudioCODEC_Interface:Audio0|PLL_Audio:pll1|PLL_Audio_0002:pll_audio_inst|altera_pll:altera_pll_i" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/PLL_Audio/PLL_Audio_0002.v Line: 88
+Info (12133): Instantiated megafunction "AudioCODEC_Interface:Audio0|PLL_Audio:pll1|PLL_Audio_0002:pll_audio_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/PLL_Audio/PLL_Audio_0002.v Line: 88
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "2"
+    Info (12134): Parameter "output_clock_frequency0" = "50.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "18.421052 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "I2C_AV_Config" for hierarchy "AudioCODEC_Interface:Audio0|I2C_AV_Config:u3" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/AudioCODEC_Interface.v Line: 73
+Info (12128): Elaborating entity "I2C_Controller" for hierarchy "AudioCODEC_Interface:Audio0|I2C_AV_Config:u3|I2C_Controller:u0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/I2C_AV_Config.v Line: 71
+Info (12128): Elaborating entity "audio_clock" for hierarchy "AudioCODEC_Interface:Audio0|audio_clock:u4" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/AudioCODEC_Interface.v Line: 85
+Info (12128): Elaborating entity "audio_converter" for hierarchy "AudioCODEC_Interface:Audio0|audio_converter:u5" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/AudioCODEC/AudioCODEC_Interface.v Line: 103
+Info (12128): Elaborating entity "Sintetizador_Interface" for hierarchy "Sintetizador_Interface:Sintetizador0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 730
+Info (12128): Elaborating entity "Sintetizador" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Sintetizador_Interface.v Line: 43
+Info (12128): Elaborating entity "PolyphonicSynthesizer" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Sintetizador.v Line: 76
+Info (12128): Elaborating entity "ChannelBank" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|ChannelBank:channelBank" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 88
+Info (12128): Elaborating entity "NoteController" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteController:noteController" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 101
+Info (12128): Elaborating entity "NoteInfoDatabase" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 111
+Info (12128): Elaborating entity "NoteTable" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase|NoteTable:noteTable" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Note.sv Line: 48
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase|NoteTable:noteTable|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/NoteTable.v Line: 81
+Info (12130): Elaborated megafunction instantiation "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase|NoteTable:noteTable|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/NoteTable.v Line: 81
+Info (12133): Instantiated megafunction "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase|NoteTable:noteTable|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/NoteTable.v Line: 81
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./Sintetizador/notes.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "7"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ehf1.tdf
+    Info (12023): Found entity 1: altsyncram_ehf1 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_ehf1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ehf1" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|NoteInfoDatabase:noteInfoDatabase|NoteTable:noteTable|altsyncram:altsyncram_component|altsyncram_ehf1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "SampleSynthesizer" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 121
+Info (12128): Elaborating entity "Oscillator" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|Oscillator:oscillator" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 22
+Info (12128): Elaborating entity "DigitalFilter" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|DigitalFilter:digitalFilter" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 36
+Info (12128): Elaborating entity "Envelope" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|Envelope:envelope" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 49
+Info (12128): Elaborating entity "SineCalculator" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 68
+Info (12128): Elaborating entity "SineTable" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator|SineTable:sineTable" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/SineCalculator.sv Line: 26
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator|SineTable:sineTable|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/SineTable.v Line: 81
+Info (12130): Elaborated megafunction instantiation "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator|SineTable:sineTable|altsyncram:altsyncram_component" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/SineTable.v Line: 81
+Info (12133): Instantiated megafunction "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator|SineTable:sineTable|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/SineTable.v Line: 81
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "./Sintetizador/sine.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_agf1.tdf
+    Info (12023): Found entity 1: altsyncram_agf1 File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/db/altsyncram_agf1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_agf1" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|SampleSynthesizer:sampleSynthesizer|SineCalculator:sineCalculator|SineTable:sineTable|altsyncram:altsyncram_component|altsyncram_agf1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "Mixer" for hierarchy "Sintetizador_Interface:Sintetizador0|Sintetizador:S1|PolyphonicSynthesizer:synth|Mixer:mixer" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Synthesizer.sv Line: 130
+Info (12128): Elaborating entity "SyscallSynthControl" for hierarchy "Sintetizador_Interface:Sintetizador0|SyscallSynthControl:SSC1" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Sintetizador_Interface.v Line: 124
+Info (12128): Elaborating entity "RS232_Interface" for hierarchy "RS232_Interface:Serial0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 749
+Info (12128): Elaborating entity "rs232tx" for hierarchy "RS232_Interface:Serial0|rs232tx:rs232transmitter" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/RS232/RS232_Interface.v Line: 38
+Info (12128): Elaborating entity "BaudTickGen" for hierarchy "RS232_Interface:Serial0|rs232tx:rs232transmitter|BaudTickGen:tickgen" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/RS232/async.v Line: 30
+Info (12128): Elaborating entity "rs232rx" for hierarchy "RS232_Interface:Serial0|rs232rx:rs232receiver" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/RS232/RS232_Interface.v Line: 48
+Info (12128): Elaborating entity "BaudTickGen" for hierarchy "RS232_Interface:Serial0|rs232rx:rs232receiver|BaudTickGen:tickgen" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/RS232/async.v Line: 99
+Info (12128): Elaborating entity "pulso" for hierarchy "RS232_Interface:Serial0|rs232rx:rs232receiver|pulso:px" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/RS232/async.v Line: 168
+Info (12128): Elaborating entity "ADC_Interface" for hierarchy "ADC_Interface:ADCI0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/TopDE.v Line: 770
+Warning (10762): Verilog HDL Case Statement warning at ADC_Interface.v(56): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/ADC_Interface.v Line: 56
+Info (12128): Elaborating entity "joystick" for hierarchy "ADC_Interface:ADCI0|joystick:joystick0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/ADC_Interface.v Line: 38
+Info (12128): Elaborating entity "joystick_adc_mega_0" for hierarchy "ADC_Interface:ADCI0|joystick:joystick0|joystick_adc_mega_0:adc_mega_0" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/joystick.v Line: 45
+Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "ADC_Interface:ADCI0|joystick:joystick0|joystick_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/ADC/joystick/synthesis/submodules/joystick_adc_mega_0.v Line: 58
+Error (12006): Node instance "REGISTERS2" instantiates undefined entity "CSRegisters". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Datapath_UNI.v Line: 226
 Info (144001): Generated suppressed messages file C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/output_files/TopDE.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 5 warnings
-    Error: Peak virtual memory: 4952 megabytes
-    Error: Processing ended: Sun Jun 09 20:36:49 2019
-    Error: Elapsed time: 00:00:54
-    Error: Total CPU time (on all processors): 00:01:39
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 22 warnings
+    Error: Peak virtual memory: 5038 megabytes
+    Error: Processing ended: Sun Jun 09 20:51:14 2019
+    Error: Elapsed time: 00:01:12
+    Error: Total CPU time (on all processors): 00:01:31
 
 
 +------------------------------------------+
