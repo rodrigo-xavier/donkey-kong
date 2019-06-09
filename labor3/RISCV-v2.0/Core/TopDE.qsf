@@ -1872,9 +1872,6 @@ set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/submodules/joyst
 set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/submodules/altera_up_avalon_adv_adc.v
 set_global_assignment -name VERILOG_FILE ADC/joystick/synthesis/joystick.v
 set_global_assignment -name QIP_FILE ADC/joystick/synthesis/joystick.qip
-set_global_assignment -name VHDL_FILE ADC/joystick/joystick_inst.vhd
-set_global_assignment -name VERILOG_FILE ADC/joystick/joystick_inst.v
-set_global_assignment -name VERILOG_FILE ADC/joystick/joystick_bb.v
 set_global_assignment -name SOURCE_FILE ADC/joystick/joystick.cmp
 set_global_assignment -name QSYS_FILE ADC/joystick.qsys
 set_global_assignment -name SDC_FILE TopDE.out.sdc
