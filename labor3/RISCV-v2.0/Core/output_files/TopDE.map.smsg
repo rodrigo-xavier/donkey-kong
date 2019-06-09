@@ -1,12 +1,12 @@
-Warning (10273): Verilog HDL warning at Registers.v(52): extended using "x" or "z" File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/CPU/Registers.v Line: 52
-Warning (10273): Verilog HDL warning at FRegisters.v(49): extended using "x" or "z" File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/CPU/FRegisters.v Line: 49
-Warning (10273): Verilog HDL warning at Break_Interface.v(30): extended using "x" or "z" File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Tempo/Break_Interface.v Line: 30
-Warning (10273): Verilog HDL warning at Break_Interface.v(32): extended using "x" or "z" File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Tempo/Break_Interface.v Line: 32
-Warning (10268): Verilog HDL information at MemStore.v(35): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Memoria/MemStore.v Line: 35
-Warning (10268): Verilog HDL information at MemLoad.v(28): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Memoria/MemLoad.v Line: 28
-Info (10281): Verilog HDL Declaration information at Oscillator.sv(12): object "OUT" differs only in case from object "out" in the same scope File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Sintetizador/Oscillator.sv Line: 12
-Info (10281): Verilog HDL Declaration information at Channel.sv(7): object "CHANNEL" differs only in case from object "channel" in the same scope File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/Sintetizador/Channel.sv Line: 7
-Warning (10268): Verilog HDL information at IrDA_Interface.v(46): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/IrDA/IrDA_Interface.v Line: 46
-Warning (10268): Verilog HDL information at IrDA_transmitter.v(73): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/IrDA/IrDA_transmitter.v Line: 73
-Warning (10268): Verilog HDL information at IrDA_receiver.v(160): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/IrDA/IrDA_receiver.v Line: 160
-Warning (10268): Verilog HDL information at IrDA_decoder.v(101): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/RISCV-v2.0/Core/IrDA/IrDA_decoder.v Line: 101
+Warning (10273): Verilog HDL warning at Registers.v(52): extended using "x" or "z" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/Registers.v Line: 52
+Warning (10273): Verilog HDL warning at FRegisters.v(49): extended using "x" or "z" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/CPU/FRegisters.v Line: 49
+Warning (10273): Verilog HDL warning at Break_Interface.v(30): extended using "x" or "z" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/Break_Interface.v Line: 30
+Warning (10273): Verilog HDL warning at Break_Interface.v(32): extended using "x" or "z" File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Tempo/Break_Interface.v Line: 32
+Warning (10268): Verilog HDL information at MemStore.v(35): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/MemStore.v Line: 35
+Warning (10268): Verilog HDL information at MemLoad.v(28): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Memoria/MemLoad.v Line: 28
+Info (10281): Verilog HDL Declaration information at Oscillator.sv(12): object "OUT" differs only in case from object "out" in the same scope File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Oscillator.sv Line: 12
+Info (10281): Verilog HDL Declaration information at Channel.sv(7): object "CHANNEL" differs only in case from object "channel" in the same scope File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/Sintetizador/Channel.sv Line: 7
+Warning (10268): Verilog HDL information at IrDA_Interface.v(46): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/IrDA/IrDA_Interface.v Line: 46
+Warning (10268): Verilog HDL information at IrDA_transmitter.v(73): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/IrDA/IrDA_transmitter.v Line: 73
+Warning (10268): Verilog HDL information at IrDA_receiver.v(160): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/IrDA/IrDA_receiver.v Line: 160
+Warning (10268): Verilog HDL information at IrDA_decoder.v(101): always construct contains both blocking and non-blocking assignments File: C:/Users/cyber/Desktop/Donkey-Kong/labor3/RISCV-v2.0/Core/IrDA/IrDA_decoder.v Line: 101
