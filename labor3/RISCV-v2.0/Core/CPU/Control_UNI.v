@@ -744,11 +744,28 @@ always @(*)
 					end				
 			endcase			
 		end
-		
 
-		  
-		  
-		  
 	endcase
+
+	// Verifica se o endereço seja invalido
+always @(*)
+    if (iPC[3:0] != 4'b0000 && iPC[3:0] != 4'b0100 
+	  && iPC[3:0] != 4'b1000 && iPC[3:0] != 4'b1100)
+		 begin
+			desaligned <= 2'b01;
+			oCSRWriteData <= 1'b1;
+		 end
+	 
+	 else if(iPC < BEGINNING_TEXT || iPC > END_TEXT) // Verifica se esta fora do segmento .text
+	    begin
+			desaligned <= 2'b10;
+			oCSRWriteData <= 1'b1;
+	    end
+		
+	 else
+		  begin
+				desaligned <= 2'b00;
+			   oCSRWriteData <= 1'b0;
+			end		
 
 endmodule
