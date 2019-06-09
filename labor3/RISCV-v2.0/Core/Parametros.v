@@ -98,7 +98,8 @@ parameter
 	OPC_URET				= 7'b1110011,
 	OPC_FRTYPE        = 7'b1010011,
 	OPC_FLOAD         = 7'b0000111,
-	OPC_FSTORE        = 7'b0100111,	
+	OPC_FSTORE        = 7'b0100111,
+	OPC_CSR		      = 7'b1110011,	
 
 /* Campo Funct7 */
 	FUNCT7_ADD			 = 7'b0000000,
@@ -180,7 +181,14 @@ parameter
 	FUNCT3_FMAX_S     = 3'b001,
 	FUNCT3_FMIN_S     = 3'b000,
 	FUNCT3_FLW        = 3'b010,
-	FUNCT3_FSW        = 3'b010,	
+	FUNCT3_FSW        = 3'b010,
+
+	FUNCT3_CSRRW      = 3'b001,
+	FUNCT3_CSRRS      = 3'b010,
+	FUNCT3_CSRRC      = 3'b011,
+	FUNCT3_CSRRWI     = 3'b101,
+	FUNCT3_CSRRSI     = 3'b110,
+	FUNCT3_CSRRCI     = 3'b111,	
 
 	
 /* Campo Rs2 */

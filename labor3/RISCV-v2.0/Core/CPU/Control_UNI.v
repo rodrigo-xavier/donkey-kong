@@ -664,6 +664,90 @@ always @(*)
 				oFPstart		  <= 1'b0;
 `endif
         end
+		
+// ------------------------------------------------------------------------ //		
+// -------------------------- LAB 3 --------------------------------------- //
+// ------------------------------------------------------------------------ //
+		
+		OPC_CSR:
+			begin
+				oOrigAULA  	<= 1'b0;
+				oOrigBULA 	<= 1'b0;
+				oRegWrite	<= 1'b1;
+				oMemWrite	<= 1'b0; 
+				oMemRead 	<= 1'b0; 
+				oMem2Reg 	<= 2'b00;
+				oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+				oFPALU2Reg    <= 1'b0;
+				oFPALUControl <= OPNULL;
+				oFRegWrite    <= 1'b0;
+				oOrigAFPALU   <= 1'b0;
+				oFWriteData   <= 1'b0;
+				oWrite2Mem    <= 1'b0;
+				oFPstart		  <= 1'b0;
+`endif
+			case (Funct7)
+				FUNCT7_ADD,  // ou qualquer outro 7'b0000000
+`ifndef RV32I					
+				FUNCT7_MULDIV:	
+					case (Funct3)
+						FUNCT3_MUL:			oALUControl <= OPMUL;
+						FUNCT3_MULH:		oALUControl <= OPMULH;
+						FUNCT3_MULHSU:		oALUControl <= OPMULHSU;
+						FUNCT3_MULHU:		oALUControl <= OPMULHU;
+						FUNCT3_DIV:			oALUControl <= OPDIV;
+						FUNCT3_DIVU:		oALUControl <= OPDIVU;
+						FUNCT3_REM:			oALUControl <= OPREM;
+						FUNCT3_REMU:		oALUControl <= OPREMU;	
+						default: // instrucao invalida
+							begin
+								oOrigAULA  	<= 1'b0;
+								oOrigBULA 	<= 1'b0;
+								oRegWrite	<= 1'b0;
+								oMemWrite	<= 1'b0; 
+								oMemRead 	<= 1'b0; 
+								oALUControl	<= OPNULL;
+								oMem2Reg 	<= 2'b00;
+								oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+								oFPALU2Reg    <= 1'b0;
+								oFPALUControl <= OPNULL;
+								oFRegWrite    <= 1'b0;
+								oOrigAFPALU   <= 1'b0;
+								oFWriteData   <= 1'b0;
+								oWrite2Mem    <= 1'b0;
+								oFPstart		  <= 1'b0;
+`endif
+							end				
+					endcase
+`endif			
+				default: // instrucao invalida
+					begin
+						oOrigAULA  	<= 1'b0;
+						oOrigBULA 	<= 1'b0;
+						oRegWrite	<= 1'b0;
+						oMemWrite	<= 1'b0; 
+						oMemRead 	<= 1'b0; 
+						oALUControl	<= OPNULL;
+						oMem2Reg 	<= 2'b00;
+						oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+						oFPALU2Reg    <= 1'b0;
+						oFPALUControl <= OPNULL;
+						oFRegWrite    <= 1'b0;
+						oOrigAFPALU   <= 1'b0;
+						oFWriteData   <= 1'b0;
+						oWrite2Mem    <= 1'b0;
+						oFPstart		  <= 1'b0;
+`endif
+					end				
+			endcase			
+		end
+		
+
+		  
+		  
 		  
 	endcase
 
