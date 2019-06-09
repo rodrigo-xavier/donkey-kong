@@ -9,6 +9,9 @@
 
  module Control_UNI(
     input  [31:0] iInstr, 
+	 
+	 input  [31:0] iPC,
+	 
     output    	 	oOrigAULA, 
 	 output 			oOrigBULA, 
 	 output			oRegWrite, 
@@ -16,14 +19,18 @@
 	 output			oMemRead,
 	 output [ 1:0]	oMem2Reg, 
 	 output [ 1:0]	oOrigPC,
-	 output [ 4:0] oALUControl
+	 output [ 4:0] oALUControl,
+	 output [ 1:0]	desaligned,	 // Controla o sistemas de exceçao para endereço invalido
+	 output 			oCSRWriteData
+	 
+	 
 `ifdef RV32IMF
 	 ,
-	 output       oFRegWrite,    // Controla a escrita no FReg
-	 output [4:0] oFPALUControl, // Controla a operacao a ser realizda pela FPULA
-	 output       oOrigAFPALU,   // Controla se a entrada A da FPULA  float ou int
-	 output       oFPALU2Reg,    // Controla a escrita no registrador de inteiros (origem FPULA ou nao?)
-	 output       oFWriteData,   // Controla a escrita nos FRegisters (origem FPALU(0) : origem memoria(1)?)
+	 output       oFRegWrite,     // Controla a escrita no FReg
+	 output [4:0] oFPALUControl,  // Controla a operacao a ser realizda pela FPULA
+	 output       oOrigAFPALU,    // Controla se a entrada A da FPULA  float ou int
+	 output       oFPALU2Reg,     // Controla a escrita no registrador de inteiros (origem FPULA ou nao?)
+	 output       oFWriteData,    // Controla a escrita nos FRegisters (origem FPALU(0) : origem memoria(1)?)
 	 output       oWrite2Mem,     // Controla a escrita na memoria (origem Register(0) : FRegister(1))
 	 output		  oFPstart			// controla/liga a FPULA
 `endif
