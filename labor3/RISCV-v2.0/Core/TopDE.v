@@ -8,10 +8,10 @@
 
 module TopDE (
       ///////// ADC Analog-Digital Converter/////////
-/*      inout              ADC_CS_N,
+      inout              ADC_CS_N,
       output             ADC_DIN,
       input              ADC_DOUT,
-      output             ADC_SCLK,*/
+      output             ADC_SCLK,
 
       ///////// AUD Audio Codec /////////
       input              AUD_ADCDAT,
@@ -752,7 +752,7 @@ RS232_Interface Serial0 (
 
 
 // *************** Analog-Digital Converter Interface ************************** Só descomentar !
-/* ADC_Interface ADCI0 (
+ADC_Interface ADCI0 (
     .iCLK_50(oCLK_50),
     .iCLK(CLK),
     .Reset(Reset),
@@ -767,7 +767,7 @@ RS232_Interface Serial0 (
     .wAddress(DAddress), 
 	 .wWriteData(DWriteData), 
 	 .wReadData(DReadData)
-); */
+); 
 
 
 

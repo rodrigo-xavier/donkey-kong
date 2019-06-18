@@ -1,6 +1,6 @@
 Restore Archived Project report for TopDE
-Sun Jun 09 11:33:56 2019
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Sun Jun 09 11:51:04 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sun Jun 09 11:33:55 2019 ;
+; Restore Archived Project Status ; Successful - Sun Jun 09 11:51:04 2019 ;
 ; Revision Name                   ; TopDE                                 ;
 ; Top-level Entity Name           ; TopDE                                 ;
 ; Family                          ; Cyclone V                             ;
@@ -46,14 +46,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/Guilherme/Desktop/OAC3/Lab3/RISCV-v2.0/RISCV-v2.0/Core.qar' into the 'C:/Users/Guilherme/Desktop/OAC3/Lab3/RISCV-v2.0/RISCV-v2.0/Core/' directory
+Info: Successfully restored 'C:/Users/cyber/Desktop/RISCV-v2.0/Core.qar' into the 'C:/Users/cyber/Desktop/RISCV-v2.0/Core/' directory
 Info: Generated report 'TopDE.restore.rpt'
-Info (23030): Evaluation of Tcl script d:/oac/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4750 megabytes
-    Info: Processing ended: Sun Jun 09 11:33:56 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Sun Jun 09 11:51:04 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +-------------------------------------------------------------------+
