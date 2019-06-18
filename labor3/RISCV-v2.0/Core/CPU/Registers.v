@@ -35,11 +35,11 @@ assign oRegDisp 	=	registers[iRegDispSelect];
 assign oVGARead 	=	registers[iVGASelect];
 
 
-																	`ifdef PIPELINE
-																		 always @(negedge iCLK or posedge iRST)
-																	`else
-																		 always @(posedge iCLK or posedge iRST)
-																	`endif
+`ifdef PIPELINE
+    always @(negedge iCLK or posedge iRST)
+`else
+    always @(posedge iCLK or posedge iRST)
+`endif
 begin
     if (iRST)
     begin // reseta o banco de registradores e pilha

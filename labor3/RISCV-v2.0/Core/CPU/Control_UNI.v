@@ -20,7 +20,6 @@
 	 output [ 1:0]	oMem2Reg, 
 	 output [ 1:0]	oOrigPC,
 	 output [ 4:0] oALUControl,
-	 
 	 output [ 1:0]	desaligned,	 // Controla o sistemas de exceçao para endereço invalido
 	 output 			oCSRWriteData
 	 
@@ -36,7 +35,6 @@
 	 output		  oFPstart			// controla/liga a FPULA
 `endif
 );
-
 
 
 wire [6:0] Opcode = iInstr[ 6: 0];
@@ -99,8 +97,7 @@ always @(*)
 						else 							oALUControl <= OPSRL;
 					FUNCT3_OR:			oALUControl <= OPOR;
 					FUNCT3_AND:			oALUControl <= OPAND;	
-					
-					default: // instrucao invalida******************************
+					default: // instrucao invalida
 						begin
 							oOrigAULA  	<= 1'b0;
 							oOrigBULA 	<= 1'b0;
@@ -201,7 +198,6 @@ always @(*)
 							else 							oALUControl <= OPSRL;
 						FUNCT3_OR:			oALUControl <= OPOR;
 						FUNCT3_AND:			oALUControl <= OPAND;
-						
 						default: // instrucao invalida
 							begin
 								oOrigAULA  	<= 1'b0;
@@ -235,8 +231,7 @@ always @(*)
 						FUNCT3_DIVU:		oALUControl <= OPDIVU;
 						FUNCT3_REM:			oALUControl <= OPREM;
 						FUNCT3_REMU:		oALUControl <= OPREMU;	
-						
-						default: // instrucao invalida*************************************************************
+						default: // instrucao invalida
 							begin
 								oOrigAULA  	<= 1'b0;
 								oOrigBULA 	<= 1'b0;
@@ -257,9 +252,8 @@ always @(*)
 `endif
 							end				
 					endcase
-`endif		
-								
-				default: // instrucao invalida**************************************************************
+`endif			
+				default: // instrucao invalida
 					begin
 						oOrigAULA  	<= 1'b0;
 						oOrigBULA 	<= 1'b0;
@@ -454,9 +448,7 @@ always @(*)
 								FUNCT3_FSGNJ_S:  oFPALUControl <= FOPSGNJ;
 								FUNCT3_FSGNJN_S: oFPALUControl <= FOPSGNJN;
 								FUNCT3_FSGNJX_S: oFPALUControl <= FOPSGNJX;
-								
-										
-								default: // instrucao invalida*************************************************************
+								default: // instrucao invalida
 									begin
 										oOrigAULA  	  <= 1'b0;
 										oOrigBULA 	  <= 1'b0;
@@ -485,7 +477,6 @@ always @(*)
 							case (Funct3)
 								FUNCT3_FMAX_S: oFPALUControl <= FOPMAX;
 								FUNCT3_FMIN_S: oFPALUControl <= FOPMIN;
-								
 								default: // instrucao invalida
 									begin
 										oOrigAULA  	  <= 1'b0;
@@ -516,7 +507,6 @@ always @(*)
 								FUNCT3_FEQ_S: oFPALUControl <= FOPCEQ;
 								FUNCT3_FLE_S: oFPALUControl <= FOPCLE;
 								FUNCT3_FLT_S: oFPALUControl <= FOPCLT;
-								
 								default: // instrucao invalida
 									begin
 										oOrigAULA  	  <= 1'b0;
@@ -546,7 +536,6 @@ always @(*)
 							case (Rs2)
 								RS2_FCVT_S_W:  oFPALUControl <= FOPCVTSW;
 								RS2_FCVT_S_WU: oFPALUControl <= FOPCVTSWU;
-								
 								default: // instrucao invalida
 									begin
 										oOrigAULA  	  <= 1'b0;
@@ -576,7 +565,6 @@ always @(*)
 							case (Rs2)
 								RS2_FCVT_W_S:  oFPALUControl <= FOPCVTWS;
 								RS2_FCVT_WU_S: oFPALUControl <= FOPCVTWUS;
-								
 								default: // instrucao invalida
 									begin
 										oOrigAULA  	  <= 1'b0;
@@ -596,8 +584,7 @@ always @(*)
 									end
 							endcase
 						end
-					
-				
+						
 					default: // instrucao invalida
 					  begin
 							oOrigAULA  	  <= 1'b0;
@@ -663,7 +650,7 @@ always @(*)
 			end
 		
 `endif
-    					
+      
 		default: // instrucao invalida
         begin
 				oOrigAULA  	<= 1'b0;
@@ -684,12 +671,90 @@ always @(*)
 				oFPstart		  <= 1'b0;
 `endif
         end
-		  
+		
+// ------------------------------------------------------------------------ //		
+// -------------------------- LAB 3 --------------------------------------- //
+// ------------------------------------------------------------------------ //
+		
+		OPC_CSR:
+			begin
+				oOrigAULA  	<= 1'b0;
+				oOrigBULA 	<= 1'b0;
+				oRegWrite	<= 1'b1;
+				oMemWrite	<= 1'b0; 
+				oMemRead 	<= 1'b0; 
+				oMem2Reg 	<= 2'b00;
+				oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+				oFPALU2Reg    <= 1'b0;
+				oFPALUControl <= OPNULL;
+				oFRegWrite    <= 1'b0;
+				oOrigAFPALU   <= 1'b0;
+				oFWriteData   <= 1'b0;
+				oWrite2Mem    <= 1'b0;
+				oFPstart		  <= 1'b0;
+`endif
+			case (Funct7)
+				FUNCT7_ADD,  // ou qualquer outro 7'b0000000
+`ifndef RV32I					
+				FUNCT7_MULDIV:	
+					case (Funct3)
+						FUNCT3_MUL:			oALUControl <= OPMUL;
+						FUNCT3_MULH:		oALUControl <= OPMULH;
+						FUNCT3_MULHSU:		oALUControl <= OPMULHSU;
+						FUNCT3_MULHU:		oALUControl <= OPMULHU;
+						FUNCT3_DIV:			oALUControl <= OPDIV;
+						FUNCT3_DIVU:		oALUControl <= OPDIVU;
+						FUNCT3_REM:			oALUControl <= OPREM;
+						FUNCT3_REMU:		oALUControl <= OPREMU;	
+						default: // instrucao invalida
+							begin
+								oOrigAULA  	<= 1'b0;
+								oOrigBULA 	<= 1'b0;
+								oRegWrite	<= 1'b0;
+								oMemWrite	<= 1'b0; 
+								oMemRead 	<= 1'b0; 
+								oALUControl	<= OPNULL;
+								oMem2Reg 	<= 2'b00;
+								oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+								oFPALU2Reg    <= 1'b0;
+								oFPALUControl <= OPNULL;
+								oFRegWrite    <= 1'b0;
+								oOrigAFPALU   <= 1'b0;
+								oFWriteData   <= 1'b0;
+								oWrite2Mem    <= 1'b0;
+								oFPstart		  <= 1'b0;
+`endif
+							end				
+					endcase
+`endif			
+				default: // instrucao invalida
+					begin
+						oOrigAULA  	<= 1'b0;
+						oOrigBULA 	<= 1'b0;
+						oRegWrite	<= 1'b0;
+						oMemWrite	<= 1'b0; 
+						oMemRead 	<= 1'b0; 
+						oALUControl	<= OPNULL;
+						oMem2Reg 	<= 2'b00;
+						oOrigPC		<= 2'b00;
+`ifdef RV32IMF
+						oFPALU2Reg    <= 1'b0;
+						oFPALUControl <= OPNULL;
+						oFRegWrite    <= 1'b0;
+						oOrigAFPALU   <= 1'b0;
+						oFWriteData   <= 1'b0;
+						oWrite2Mem    <= 1'b0;
+						oFPstart		  <= 1'b0;
+`endif
+					end				
+			endcase			
+		end
+
 	endcase
 
-
-	
-// Verifica se o endereço seja invalido
+	// Verifica se o endereço seja invalido
 always @(*)
     if (iPC[3:0] != 4'b0000 && iPC[3:0] != 4'b0100 
 	  && iPC[3:0] != 4'b1000 && iPC[3:0] != 4'b1100)
@@ -708,7 +773,6 @@ always @(*)
 		  begin
 				desaligned <= 2'b00;
 			   oCSRWriteData <= 1'b0;
-			end			
-
+			end		
 
 endmodule
