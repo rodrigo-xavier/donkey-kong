@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+=======
 `ifndef PARAM
 	`include "../Parametros.v"
 `endif
 
+>>>>>>> origin/joystick_exceptions
 module ADC_Interface(
     input         iCLK_50,
     input         iCLK,
@@ -10,7 +13,10 @@ module ADC_Interface(
     output        ADC_DIN,
     input         ADC_DOUT,
     output        ADC_SCLK,
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/joystick_exceptions
     //  Barramento de IO
     input         wReadEnable, wWriteEnable,
     input  [3:0]  wByteEnable,
@@ -18,6 +24,20 @@ module ADC_Interface(
     output [31:0] wReadData
 );
 
+<<<<<<< HEAD
+
+
+	
+// Fazer :)
+
+
+
+
+endmodule
+
+
+
+=======
 wire [11:0] CH [7:0];
 
 joystick joystick0(  
@@ -68,3 +88,4 @@ always @(*)
 		wReadData <= 32'hzzzzzzzz;
 
 endmodule
+>>>>>>> origin/joystick_exceptions
