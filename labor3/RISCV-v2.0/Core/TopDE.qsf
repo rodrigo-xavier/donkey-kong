@@ -1867,6 +1867,7 @@ set_global_assignment -name SEARCH_PATH cpu/fpula
 set_global_assignment -name SEARCH_PATH audiocodec
 set_global_assignment -name SEARCH_PATH tempo
 set_global_assignment -name SEARCH_PATH memoria
+set_global_assignment -name VERILOG_FILE CPU/CSRegisters.v
 set_global_assignment -name QIP_FILE ADC/joystick/synthesis/joystick.qip
 set_global_assignment -name SDC_FILE TopDE.out.sdc
 set_global_assignment -name VERILOG_FILE TopDE.v

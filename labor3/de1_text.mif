@@ -1,0 +1,50 @@
+DEPTH = 16384;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+00000000 : ff2002b7;   % 14: li t0, 0xFF200200		# endereco do CH0 %
+00000001 : 20028293;   % 14:  %
+00000002 : ff0133b7;   % 17: li t2, 0xFF012C00		# endereco final %
+00000003 : c0038393;   % 17:  %
+00000004 : ff000337;   % 20:     li t1, 0xFF000000		# Seta a imagem para o endereço inicial %
+00000005 : 00030313;   % 20:  %
+00000006 : 02000f13;   % 22:     li t5, 0x00000020       # escolhe o valor do potenciômetro que define cima %
+00000007 : 00001fb7;   % 23:     li t6, 0x00000fee       # escolhe o valor do potenciômetro que define baixo %
+00000008 : feef8f93;   % 23:  %
+00000009 : 0002a403;   % 24:     lw x8, 0(t0) %
+0000000a : 05e44a63;   % 25:     blt x8, t5, UP %
+0000000b : 05f45e63;   % 26:     bge x8, t6, DOWN %
+0000000c : 02000f13;   % 28:     li t5, 0x00000020       # escolhe o valor do potenciômetro que define direita %
+0000000d : 00001fb7;   % 29:     li t6, 0x00000fee       # escolhe o valor do potenciômetro que define esquerda %
+0000000e : feef8f93;   % 29:  %
+0000000f : 0042a483;   % 30:     lw x9, 4(t0) %
+00000010 : 07e4c063;   % 31:     blt x9, t5, RIGHT %
+00000011 : 05f4d863;   % 32:     bge x9, t6, LEFT %
+00000012 : 0280006f;   % 34:     j CENTER %
+00000013 : fc7302e3;   % 44:     beq t1, t2, JOYLOOP %
+00000014 : 01c30863;   % 45:     beq t1, t3, SETPIXEL %
+00000015 : 00032023;   % 46: 	sw zero, 0(t1)		        # escreve a word na mem�ria VGA %
+00000016 : 00430313;   % 47: 	addi t1, t1, 4		        # soma 4 ao endere�o %
+00000017 : ff1ff06f;   % 48: 	j BLACKWINDOW			    # volta a verificar %
+00000018 : fff00e93;   % 51:     li t4, 0xffffffff           # escolhe a cor do pixel %
+00000019 : 01d32023;   % 52: 	sw t4, 0(t1)		        # escreve a word na mem�ria VGA %
+0000001a : 00430313;   % 53: 	addi t1, t1, 4		        # soma 4 ao endere�o %
+0000001b : fe1ff06f;   % 54: 	j BLACKWINDOW			    # volta a verificar %
+0000001c : ff009e37;   % 57:     li t3, 0xFF0096A0       # endereco do pixel central %
+0000001d : 6a0e0e13;   % 57:  %
+0000001e : fd5ff06f;   % 58:     j BLACKWINDOW %
+0000001f : ff000e37;   % 61:     li t3, 0xFF0000A0       # endereco do pixel acima %
+00000020 : 0a0e0e13;   % 61:  %
+00000021 : fc9ff06f;   % 62:     j BLACKWINDOW %
+00000022 : ff013e37;   % 65:     li t3, 0xFF012b60       # endereco do pixel abaixo %
+00000023 : b60e0e13;   % 65:  %
+00000024 : fbdff06f;   % 66:     j BLACKWINDOW %
+00000025 : ff009e37;   % 69:     li t3, 0xFF009600       # endereco do pixel esquerdo %
+00000026 : 600e0e13;   % 69:  %
+00000027 : fb1ff06f;   % 70:     j BLACKWINDOW %
+00000028 : ff009e37;   % 73:     li t3, 0xFF00973f       # endereco do pixel direito %
+00000029 : 73fe0e13;   % 73:  %
+0000002a : fa5ff06f;   % 74:     j BLACKWINDOW %
+END;

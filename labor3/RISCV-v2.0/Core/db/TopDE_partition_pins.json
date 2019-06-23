@@ -340,46 +340,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Saida_ULA[20]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[21]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[22]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[23]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[24]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[25]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[26]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[27]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[28]",
-					"strict" : false
-				},
-				{
-					"name" : "Saida_ULA[29]",
-					"strict" : false
-				},
-				{
 					"name" : "MemD_Endereco[0]",
 					"strict" : false
 				},
@@ -405,46 +365,6 @@
 				},
 				{
 					"name" : "MemD_Endereco[19]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[20]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[21]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[22]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[23]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[24]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[25]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[26]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[27]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[28]",
-					"strict" : false
-				},
-				{
-					"name" : "MemD_Endereco[29]",
 					"strict" : false
 				},
 				{
@@ -492,7 +412,171 @@
 					"strict" : false
 				},
 				{
-					"name" : "MemD_DadoLeitura[0]",
+					"name" : "HEX1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[1]",
 					"strict" : false
 				},
 				{
@@ -560,259 +644,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "PC[0]",
+					"name" : "MemD_DadoLeitura[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[3]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[4]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[5]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[6]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[7]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[8]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[9]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[10]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[11]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[12]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[13]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[14]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[15]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[16]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[17]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[18]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[19]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[20]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[21]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[22]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[23]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[24]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[25]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[26]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[27]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[28]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[29]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[30]",
-					"strict" : false
-				},
-				{
-					"name" : "PC[31]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[0]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[1]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[2]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[3]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[4]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[5]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[6]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[7]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[8]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[9]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[10]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[11]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[12]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[13]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[14]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[15]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[16]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[17]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[18]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[19]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[20]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[21]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[22]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[23]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[24]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[25]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[26]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[27]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[28]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[29]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[30]",
-					"strict" : false
-				},
-				{
-					"name" : "BR_Escrita[31]",
+					"name" : "AUD_DACDAT",
 					"strict" : false
 				},
 				{
@@ -1920,11 +1756,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "AUD_DACDAT",
+					"name" : "Saida_ULA[29]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[1]",
+					"name" : "Saida_ULA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[29]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[30]",
 					"strict" : false
 				},
 				{
@@ -2072,11 +1916,79 @@
 					"strict" : false
 				},
 				{
-					"name" : "Saida_ULA[30]",
+					"name" : "BR_Escrita[31]",
 					"strict" : false
 				},
 				{
-					"name" : "MemD_Endereco[30]",
+					"name" : "Saida_ULA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[24]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[25]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[26]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[27]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[28]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Saida_ULA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[20]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[21]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[22]",
+					"strict" : false
+				},
+				{
+					"name" : "MemD_Endereco[23]",
 					"strict" : false
 				},
 				{
@@ -2212,6 +2124,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
 					"name" : "ADC_DIN",
 					"strict" : false
 				},
@@ -2220,171 +2136,255 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
+					"name" : "PC[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[5]",
+					"name" : "PC[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[6]",
+					"name" : "PC[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[0]",
+					"name" : "PC[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[1]",
+					"name" : "PC[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[2]",
+					"name" : "PC[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[3]",
+					"name" : "PC[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[4]",
+					"name" : "PC[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[5]",
+					"name" : "PC[8]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[6]",
+					"name" : "PC[9]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[0]",
+					"name" : "PC[10]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[1]",
+					"name" : "PC[11]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[2]",
+					"name" : "PC[12]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[3]",
+					"name" : "PC[13]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[4]",
+					"name" : "PC[14]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[5]",
+					"name" : "PC[15]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[6]",
+					"name" : "PC[16]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[0]",
+					"name" : "PC[17]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[1]",
+					"name" : "PC[18]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[2]",
+					"name" : "PC[19]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[3]",
+					"name" : "PC[20]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[4]",
+					"name" : "PC[21]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[5]",
+					"name" : "PC[22]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[6]",
+					"name" : "PC[23]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[0]",
+					"name" : "PC[24]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[1]",
+					"name" : "PC[25]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[2]",
+					"name" : "PC[26]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[3]",
+					"name" : "PC[27]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[4]",
+					"name" : "PC[28]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[5]",
+					"name" : "PC[29]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[6]",
+					"name" : "PC[30]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[0]",
+					"name" : "PC[31]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[1]",
+					"name" : "BR_Escrita[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[2]",
+					"name" : "BR_Escrita[1]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[3]",
+					"name" : "BR_Escrita[2]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[4]",
+					"name" : "BR_Escrita[3]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[5]",
+					"name" : "BR_Escrita[4]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[6]",
+					"name" : "BR_Escrita[5]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[7]",
+					"name" : "BR_Escrita[6]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_BLANK_N",
+					"name" : "BR_Escrita[7]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[0]",
+					"name" : "BR_Escrita[8]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[1]",
+					"name" : "BR_Escrita[9]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[10]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[11]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[12]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[13]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[14]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[15]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[16]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[17]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[18]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[19]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[20]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[21]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[22]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[23]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[24]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[25]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[26]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[27]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[28]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[29]",
+					"strict" : false
+				},
+				{
+					"name" : "BR_Escrita[30]",
 					"strict" : false
 				},
 				{
@@ -2424,11 +2424,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[8]",
+					"name" : "SW[9]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[9]",
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
@@ -2460,11 +2460,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[1]",
+					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[2]",
+					"name" : "KEY[1]",
 					"strict" : false
 				},
 				{
