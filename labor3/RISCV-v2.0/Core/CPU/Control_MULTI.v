@@ -34,6 +34,16 @@ module Control_MULTI (
 	output          oFWriteData,
 	output          oWrite2Mem
 `endif
+
+
+	 output		  wWriteCSROrFPULA,
+	 input  [ 3:0]iDesalinhado,
+	 input  [ 3:0]wWriteUcause,
+	 output		  oDesalinhado,	// Controla qual o proximo PC a ser entrado
+	 output [3:0] oWriteUcause, 	// Controla o tipo de Exceçao que possa dar
+	 output [4:0] oRegWriteCSR, 	// Controla a escrita no Banco de registradores 
+	 output [4:0] oInstrucaoCSR
+	 
 	);
 
 
@@ -96,6 +106,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b1;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -123,6 +134,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b1;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -150,6 +162,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -178,6 +191,7 @@ always @(*)
 `endif
 					default:
 									nx_state 		<= ST_ERRO;
+									oWriteUcause  <= ILLEGAL_INST;
 				endcase		
 			end	
 
@@ -196,6 +210,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -215,6 +230,7 @@ always @(*)
 `endif
 					default:
 									nx_state 		<= ST_ERRO;
+									oWriteUcause  <= ILLEGAL_INST;
 				endcase		
 			end	
 	
@@ -234,6 +250,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b1;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -262,6 +279,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b1;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -290,6 +308,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -318,6 +337,7 @@ always @(*)
 				oMemWrite 		<= 1'b1;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -346,6 +366,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -373,6 +394,7 @@ always @(*)
 				oRegWrite 		<= 1'b0;
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -407,6 +429,7 @@ always @(*)
 							begin 
 								oALUControl 	<= OPNULL;		
 								nx_state			<= ST_ERRO;
+								oWriteUcause  <= ILLEGAL_INST;
 							end			
 					endcase
 `ifndef RV32I										
@@ -424,6 +447,7 @@ always @(*)
 							begin 
 								oALUControl 	<= OPNULL;		
 								nx_state			<= ST_ERRO;
+								oWriteUcause  <= ILLEGAL_INST;
 							end	
 					endcase				
 `endif					
@@ -431,6 +455,7 @@ always @(*)
 					begin 
 						oALUControl 	<= OPNULL;		
 						nx_state			<= ST_ERRO;
+						oWriteUcause  <= ILLEGAL_INST;
 					end					
 			endcase
 		end			
@@ -450,6 +475,7 @@ always @(*)
 				oRegWrite 		<= 1'b0;
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -468,6 +494,7 @@ always @(*)
 							begin 
 								oALUControl 	<= OPNULL;		
 								nx_state			<= ST_ERRO;
+								oWriteUcause  <= ILLEGAL_INST;
 							end	
 				endcase			
 				if(contador == 5'd6)
@@ -491,6 +518,7 @@ always @(*)
 				oRegWrite 		<= 1'b0;
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -519,6 +547,7 @@ always @(*)
 						begin 
 							oALUControl 	<= OPNULL;		
 							nx_state			<= ST_ERRO;
+							oWriteUcause  <= ILLEGAL_INST;
 						end				
 				endcase
 			end
@@ -540,6 +569,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -568,6 +598,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPLUI;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -596,6 +627,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -624,6 +656,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -652,6 +685,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -681,6 +715,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPADD;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -711,6 +746,7 @@ always @(*)
 				oMemWrite 		<= 1'b0;
 				oMemRead 		<= 1'b0;
 				oALUControl 	<= OPNULL;
+				wWriteCSROrFPULA <= 1'b0;
 `ifdef RV32IMF                                                 //RV32IMF
 				oFRegWrite     <= 1'b0;
 				oFPALUControl  <= OPNULL;
@@ -746,7 +782,7 @@ always @(*)
 				oFPALUStart    <= 1'b0;     // FPALU nao realiza operacao
 				oFWriteData    <= 1'b1;     // Nessa fase ainda nao eh escrito nada no FReg
 				oWrite2Mem     <= 1'b0;     // Nao importa o que sera escrito na memoria
-			
+			   
 				nx_state 		<= ST_FLW1;
 			end
 		ST_FLW1:
@@ -945,7 +981,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -979,7 +1015,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1014,7 +1050,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1048,7 +1084,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1082,7 +1118,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1109,7 +1145,7 @@ always @(*)
 							oFPALUStart    <= 1'b0;
 							oFWriteData    <= 1'b0;
 							oWrite2Mem     <= 1'b0;
-							
+							oWriteUcause  <= ILLEGAL_INST;
 							nx_state 		<= ST_ERRO;
 						end
 				endcase
@@ -1205,7 +1241,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1239,7 +1275,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1274,7 +1310,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1308,7 +1344,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1342,7 +1378,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1369,7 +1405,7 @@ always @(*)
 							oFPALUStart    <= 1'b0;
 							oFWriteData    <= 1'b0;
 							oWrite2Mem     <= 1'b0;
-							
+							oWriteUcause  <= ILLEGAL_INST;
 							nx_state 		<= ST_ERRO;
 						end
 				endcase
@@ -1468,7 +1504,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1502,7 +1538,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1537,7 +1573,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1571,7 +1607,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1605,7 +1641,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1632,7 +1668,7 @@ always @(*)
 							oFPALUStart    <= 1'b0;
 							oFWriteData    <= 1'b0;
 							oWrite2Mem     <= 1'b0;
-							
+							oWriteUcause  <= ILLEGAL_INST;
 							nx_state 		<= ST_ERRO;
 						end
 				endcase
@@ -1744,7 +1780,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1780,7 +1816,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1817,7 +1853,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1853,7 +1889,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1889,7 +1925,7 @@ always @(*)
 										oFPALUStart    <= 1'b0;
 										oFWriteData    <= 1'b0;
 										oWrite2Mem     <= 1'b0;
-										
+										oWriteUcause  <= ILLEGAL_INST;
 										nx_state 		<= ST_ERRO;
 									end
 							endcase
@@ -1915,7 +1951,7 @@ always @(*)
 							oFPALUStart    <= 1'b0;
 							oFWriteData    <= 1'b0;
 							oWrite2Mem     <= 1'b0;
-							
+							oWriteUcause  <= ILLEGAL_INST;
 							nx_state 		<= ST_ERRO;
 						end
 				endcase
@@ -1946,12 +1982,23 @@ always @(*)
 				oFWriteData    <= 1'b0;
 				oWrite2Mem     <= 1'b0;
 `endif	
-
+				oWriteUcause  <= ILLEGAL_INST;
 				
 				nx_state 		<= ST_ERRO;
 			end
 		
 	endcase
-
+	
+always @(*)
+	begin
+			if(oWriteUcause == ILLEGAL_INST || iDesalinhado == INST_MISS ||
+				iDesalinhado == INST_FAULT   || wWriteUcause == LOAD_MISS ||
+				wWriteUcause == LOAD_FAULT   || wWriteUcause == STORE_MISS||
+				wWriteUcause == STORE_FAULT  || wWriteUcause == CALL_FAIL )
+					begin
+							oRegWriteCSR <= 5'b00001;
+							oDesalinhado <= 1'b1;
+					end
+	end
 
 endmodule
