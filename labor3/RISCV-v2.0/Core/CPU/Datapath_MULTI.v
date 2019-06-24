@@ -392,6 +392,30 @@ always @(*)
 		default:	wMemAddress <= ZERO;
 	endcase
 	
+	
+wire [3:0] wUcause;
+always @(*)
+    case(wWriteUcause || oDesalinhado) // Multiplexador intermediario para definir se o que entra no RegWrite do banco de registradores vem da FPULA ou do mux original implementado na ISA RV32I
+		  4'b0010:      wUcause <= ILLEGAL_INST;
+		  4'b0100:      wUcause <= LOAD_MISS;
+		  4'b0101:      wUcause <= LOAD_FAULT;
+		  4'b0110:      wUcause <= STORE_MISS;
+		  4'b0111:      wUcause <= STORE_FAULT;
+		  4'b1000:      wUcause <= CALL_FAIL;
+		  default:	    wUcause <= ZERO;
+		  endcase
+
+
+
+wire [31:0] wCSRDesalinhado;	 
+always @(*)
+    case(wDesalinhado) // Multiplexador que controla o que vai ser escrito em um registrador de ponto flutuante (origem memoria ou FPALU?)
+        1'b0:      wCSRDesalinhado <= wiPC;
+        1'b1:      wCSRDesalinhado <= wUTVECT;
+		  default:	 wCSRDesalinhado <= ZERO;
+    endcase 
+
+	
 `ifdef RV32IMF
 wire [31:0] wOrigAFPALU;
 always @(*)
@@ -419,10 +443,40 @@ always @(*)
 		  default:	 wWrite2Mem <= ZERO;
     endcase
 `endif
+/*		
+wire [3:0] wUcause;
+begin
+	   if (wWriteUcause == 4'b0010)
+			wUcause <= ILLEGAL_INST;
+			
+		if (wWriteUcause == 4'b0100)
+			wUcause <= LOAD_MISS;
+			
+		if (wWriteUcause == 4'b0101)
+			wUcause <= LOAD_FAULT;
+			
+		if (wWriteUcause == 4'b0110)
+			wUcause <= STORE_MISS;
 		
-
+		if (wWriteUcause == 4'b0111)
+			wUcause <= STORE_FAULT;
 		
+		if (wWriteUcause == 4'b1000)
+			wUcause <= CALL_FAIL;
+end
 
+
+
+wire [31:0] wCSRDesalinhado;	
+begin
+		if (wDesalinhado == 1'b0)
+			wCSRDesalinhado <= wiPC;
+			
+		if (wDesalinhado == 'b1)
+			wCSRDesalinhado <= wUTVECT;
+end
+		
+*/
 
 // ****************************************************** 
 // A cada ciclo de clock					  						 
@@ -465,29 +519,12 @@ always @(posedge iCLK or posedge iRST)
 			
 		if (wCEscrevePC || wBranch & wCEscrevePCCond)
 			PC	<= wiPC;	
+		
+		if (wUcause)
+			PC <= wUTVECT;
 
 	  end
+	   
 
-wire [3:0] wUcause;
-always @(*)
-    case(wWriteUcause || oDesalinhado) // Multiplexador intermediario para definir se o que entra no RegWrite do banco de registradores vem da FPULA ou do mux original implementado na ISA RV32I
-		  4'b0010:      wUcause <= ILLEGAL_INST;
-		  4'b0100:      wUcause <= LOAD_MISS;
-		  4'b0101:      wUcause <= LOAD_FAULT;
-		  4'b0110:      wUcause <= STORE_MISS;
-		  4'b0111:      wUcause <= STORE_FAULT;
-		  4'b1000:      wUcause <= CALL_FAIL;
-		  default:	    wUcause <= ZERO;
-		  endcase
-
-
-
-wire [31:0] wCSRDesalinhado;	 
-always @(*)
-    case(wDesalinhado) // Multiplexador que controla o que vai ser escrito em um registrador de ponto flutuante (origem memoria ou FPALU?)
-        1'b0:      wCSRDesalinhado <= wiPC;
-        1'b1:      wCSRDesalinhado <= wUTVECT;
-		  default:	 wCSRDesalinhado <= ZERO;
-    endcase 
 
 endmodule 
