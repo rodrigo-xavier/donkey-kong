@@ -285,14 +285,16 @@ Control_MULTI CONTROL0 (
 	.oFWriteData(wCFWriteData),
 	.oWrite2Mem(wCWrite2Mem)	
 `endif	
-	 .oDesalinhado(wDesalinhado),
-	 .oWriteUcause(mWriteUcause),
-	 .oRegWriteCSR(wRegWriteCSR),
-	 .oInstrucaoCSR(wInstrucaoCSR),
-	 
-	 .wWriteUcause(wCWriteUcause),
-	 .wWriteCSROrFPULA(mWriteCSROrFPULA),
-	 .iDesalinhado(wCDesalinhado)
+
+
+	,
+	.oDesalinhado(wDesalinhado),
+	.oWriteUcause(mWriteUcause),
+	.oRegWriteCSR(wRegWriteCSR),
+	.oInstrucaoCSR(wInstrucaoCSR),
+	.wWriteUcause(wCWriteUcause),
+	.wWriteCSROrFPULA(mWriteCSROrFPULA),
+	.iDesalinhado(wCDesalinhado)
 	);
 
 	
@@ -344,7 +346,14 @@ Datapath_MULTI DATAPATH0 (
    .wCMemWrite(wCMemWrite),
 	.wCMemRead(wCMemRead),
 	.wCALUControl(wCALUControl),	 
+	.wRegWriteCSR(wRegWriteCSR),	
+	.wDesalinhado(wDesalinhado),	
+	.wWriteUcause(mWriteUcause), 	
+	.oCWriteUcause(wCWriteUcause),
+	.oDesalinhado(wCDesalinhado),
+	.wWriteCSROrFPULA(mWriteCSROrFPULA)
 `ifdef RV32IMF
+   ,
 	.wFPALUReady(wFPALUReady),
 	.wCFRegWrite(wCFRegWrite),
 	.wCFPALUControl(wCFPALUControl),
@@ -362,13 +371,7 @@ Datapath_MULTI DATAPATH0 (
     .DwReadData(DwReadData)
 	 
 	 //CSR
-	 .wRegWriteCSR(wRegWriteCSR),	
-	 .wDesalinhado(wDesalinhado),	
-	 .wWriteUcause(mWriteUcause), 	
-	 
-	 .oCWriteUcause(wCWriteUcause),
-	 .oDesalinhado(wCDesalinhado),
-	 .wWriteCSROrFPULA(mWriteCSROrFPULA)
+
 );
 `endif
 
