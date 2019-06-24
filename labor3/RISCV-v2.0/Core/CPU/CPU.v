@@ -88,17 +88,21 @@ wire 			 wCFPALU2Reg;
 wire 			 wCFWriteData;
 wire 			 wCWrite2Mem;
 wire 			 wCFPstart;
-`endif
 
-wire 	[1:0]  wDesaligned; //------------------------------
+
+wire			 wCDesalinhado;	
+wire [3:0]   wCWriteUcause; 	
+wire 		    wCRegWriteCSR;
+wire [3:0]   mWriteUcause;
+wire 	[4:0]	 wRegWriteCSR;
+wire			 mWriteCSROrFPULA;
+
+`endif
 
 
  Control_UNI CONTROL0 (
-	.iInstr(wInstr),
-	
-	.iPC(PC), //-------------------------------------
-   
-	.oOrigAULA(wCOrigAULA), 
+	.iInstr(wInstr), 
+   .oOrigAULA(wCOrigAULA), 
 	.oOrigBULA(wCOrigBULA), 
 	.oRegWrite(wCRegWrite), 
 	.oMemWrite(wCMemWrite), 
@@ -106,19 +110,25 @@ wire 	[1:0]  wDesaligned; //------------------------------
 	.oMem2Reg(wCMem2Reg), 
 	.oOrigPC(wCOrigPC),
 	.oALUControl(wCALUControl),
-	
-	.desaligned(wDesaligned) //--------------------------------
-	
 `ifdef RV32IMF
-	 ,
 	 .oFRegWrite(wCFRegWrite),
 	 .oFPALUControl(wCFPALUControl),
 	 .oOrigAFPALU(wCOrigAFPALU),
 	 .oFPALU2Reg(wCFPALU2Reg), 
 	 .oFWriteData(wCFWriteData),
 	 .oWrite2Mem(wCWrite2Mem),
-	 .oFPstart(wCFPstart)
+	 .oFPstart(wCFPstart),
 `endif	
+	 
+	 .oDesalinhado(wDesalinhado),
+	 .oWriteUcause(mWriteUcause),
+	 .oRegWriteCSR(wRegWriteCSR),
+	 .oInstrucaoCSR(wInstrucaoCSR),
+	 
+	 .wWriteUcause(wCWriteUcause),
+	 .wWriteCSROrFPULA(mWriteCSROrFPULA),
+	 .iDesalinhado(wCDesalinhado)
+	 
 	
 );
 
@@ -190,7 +200,18 @@ Datapath_UNI DATAPATH0 (
     .IwByteEnable(IwByteEnable),
     .IwWriteData(IwWriteData),
     .IwReadData(IwReadData),
-    .IwAddress(IwAddress)
+    .IwAddress(IwAddress),
+	 
+	 
+	 //CSR
+	 .wRegWriteCSR(wRegWriteCSR),	
+	 .wDesalinhado(wDesalinhado),	
+	 .wWriteUcause(mWriteUcause), 	
+	 
+	 .oCWriteUcause(wCWriteUcause),
+	 .oDesalinhado(wCDesalinhado),
+	 .wWriteCSROrFPULA(mWriteCSROrFPULA)
+
 );
  `endif
 
@@ -264,6 +285,14 @@ Control_MULTI CONTROL0 (
 	.oFWriteData(wCFWriteData),
 	.oWrite2Mem(wCWrite2Mem)	
 `endif	
+	 .oDesalinhado(wDesalinhado),
+	 .oWriteUcause(mWriteUcause),
+	 .oRegWriteCSR(wRegWriteCSR),
+	 .oInstrucaoCSR(wInstrucaoCSR),
+	 
+	 .wWriteUcause(wCWriteUcause),
+	 .wWriteCSROrFPULA(mWriteCSROrFPULA),
+	 .iDesalinhado(wCDesalinhado)
 	);
 
 	
@@ -331,6 +360,15 @@ Datapath_MULTI DATAPATH0 (
     .DwWriteData(DwWriteData),
     .DwAddress(DwAddress),
     .DwReadData(DwReadData)
+	 
+	 //CSR
+	 .wRegWriteCSR(wRegWriteCSR),	
+	 .wDesalinhado(wDesalinhado),	
+	 .wWriteUcause(mWriteUcause), 	
+	 
+	 .oCWriteUcause(wCWriteUcause),
+	 .oDesalinhado(wCDesalinhado),
+	 .wWriteCSROrFPULA(mWriteCSROrFPULA)
 );
 `endif
 
