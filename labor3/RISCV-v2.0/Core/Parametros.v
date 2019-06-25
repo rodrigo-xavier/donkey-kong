@@ -18,8 +18,8 @@ Tiago Rodrigues da Cunha Cabral 			- 15/0150296
 
 // **************************************************** 
 // * Escolha o tipo de processador a ser implementado *
-`define UNICICLO
-//`define MULTICICLO 
+//`define UNICICLO
+`define MULTICICLO 
 //`define PIPELINE
 
 
