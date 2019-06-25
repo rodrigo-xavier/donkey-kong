@@ -18,8 +18,8 @@ Tiago Rodrigues da Cunha Cabral 			- 15/0150296
 
 // **************************************************** 
 // * Escolha o tipo de processador a ser implementado *
-`define UNICICLO
-//`define MULTICICLO 
+//`define UNICICLO
+`define MULTICICLO 
 //`define PIPELINE
 
 
@@ -98,7 +98,7 @@ parameter
 	OPC_URET				= 7'b1110011,
 	OPC_FRTYPE        = 7'b1010011,
 	OPC_FLOAD         = 7'b0000111,
-	OPC_FSTORE        = 7'b0100111,
+	OPC_FSTORE        = 7'b0100111,	
 	OPC_CSR		      = 7'b1110011,	
 
 /* Campo Funct7 */
@@ -181,14 +181,14 @@ parameter
 	FUNCT3_FMAX_S     = 3'b001,
 	FUNCT3_FMIN_S     = 3'b000,
 	FUNCT3_FLW        = 3'b010,
-	FUNCT3_FSW        = 3'b010,
-
+	FUNCT3_FSW        = 3'b010,		
+	
 	FUNCT3_CSRRW      = 3'b001,
 	FUNCT3_CSRRS      = 3'b010,
 	FUNCT3_CSRRC      = 3'b011,
 	FUNCT3_CSRRWI     = 3'b101,
 	FUNCT3_CSRRSI     = 3'b110,
-	FUNCT3_CSRRCI     = 3'b111,	
+	FUNCT3_CSRRCI     = 3'b111,
 
 	
 /* Campo Rs2 */
@@ -196,6 +196,17 @@ parameter
 	RS2_FCVT_S_WU     = 5'b00001,
 	RS2_FCVT_W_S      = 5'b00000,
 	RS2_FCVT_WU_S     = 5'b00001,
+	
+	
+/* Campo tipos de Ucause*/
+	INST_MISS         = 4'b0000,
+	INST_FAULT        = 4'b0001,
+	ILLEGAL_INST      = 4'b0010,
+	LOAD_MISS         = 4'b0100,
+	LOAD_FAULT        = 4'b0101,
+	STORE_MISS        = 4'b0110,
+	STORE_FAULT       = 4'b0111,
+	CALL_FAIL			= 4'b1000,
 	
 
 	
