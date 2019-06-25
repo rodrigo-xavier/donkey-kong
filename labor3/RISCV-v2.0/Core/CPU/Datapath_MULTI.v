@@ -61,6 +61,16 @@ module Datapath_MULTI (
 	input  wire        wCWrite2Mem,
 `endif
 
+	 // Monitora o sinal de ControleCSR
+	 input 			wRegWriteCSR,	// Controla a escrita no registradore CSR
+	 input			wInstrucaoCSR,
+	 input			wDesalinhado,	// Controla a o desenvolvimento do PC
+	 input [ 3:0]  wWriteUcause, 	// Controla o tipo de Exceçao que possa dar
+	 output[ 3:0]  oCWriteUcause,
+	 output[ 3:0]	oDesalinhado,	
+	 input 			wWriteCSROrFPULA,
+
+
     //  Barramento
    output wire        DwReadEnable, DwWriteEnable,
    output wire [ 3:0] DwByteEnable,
@@ -147,6 +157,28 @@ wire [ 2:0] wFunct3		= IR[14:12];
 wire [31:0] wMemDataWrite;
 wire [ 3:0] wMemEnable;
 
+
+//VERIFICA DESALINHAMENTO
+always @(*)
+begin
+		 
+		 if (PC[3:0] != 4'b0000 && PC[3:0] != 4'b0100 
+		  && PC[3:0] != 4'b1000 && PC[3:0] != 4'b1100)  // Verifica se o PC termina em 0 | 4 | 8 | 12 
+				 
+				 begin
+					oDesalinhado = INST_MISS;
+				 end
+		
+		 if(PC < BEGINNING_TEXT || PC > END_TEXT) // Verifica se esta fora do segmento .text
+			 
+				 begin
+					oDesalinhado = INST_FAULT;
+				 end
+	end 
+
+
+
+
 MemStore MEMSTORE0 (
     .iAlignment(wMemAddress[1:0]),
     .iFunct3(wFunct3),
@@ -192,7 +224,7 @@ Registers REGISTERS0 (
     .iReadRegister1(wRs1),
     .iReadRegister2(wRs2),
     .iWriteRegister(wRd),
-    .iWriteData(wRegWrite),
+    .iWriteData(wRegWriteCSRtoReg),
     .iRegWrite(wCRegWrite),
     .oReadData1(wRead1),
     .oReadData2(wRead2),
@@ -227,6 +259,37 @@ FRegisters REGISTERS1 (
 
 `endif
 
+// Banco de Registradores do CSR
+wire [31:0] wUTVECT;
+wire [ 7:0] wReadRegisterCSR;
+wire [31:0] wRegDataToCSR;
+wire [31:0] wCSRDataToReg;
+
+//CSR
+CSRegisters REGISTERS2 (
+    .iCLK(iCLK),
+    .iRST(iRST),
+	 .iRegWriteCSR(wRegWriteCSR),
+	 .iUcause(wUcause),
+	 .iInstrucaoCSR(wInstrucaoCSR),
+	 .iInst(wInstr),
+	 .iPC(PC),
+	 .iImmData(wImmediate),
+	 .iReadRegisterCSR(wReadRegisterCSR),
+	 .oUTVECT(wUTVECT),
+	 .iRegDataToCSR(wRegDataToCSR),
+	 .oCSRDataToReg(wCSRDataToReg)
+
+	 
+	 //Descomentar para mostrar no VGA
+	 
+	 /*
+    .iRegDispSelect(wRegDispSelect),    // seleção para display
+    .oRegDisp(wRegDisp),                // Reg display
+    .iVGASelect(wVGASelect),            // para mostrar Regs na tela
+    .oVGARead(wVGARead)                 // para mostrar Regs na tela */
+	 
+	);
 	
 // Unidade de controle de Branches 
 wire 	wBranch;
@@ -334,6 +397,30 @@ always @(*)
 		default:	wMemAddress <= ZERO;
 	endcase
 	
+	
+wire [3:0] wUcause;
+always @(*)
+    case(wWriteUcause || oDesalinhado) // Multiplexador intermediario para definir se o que entra no RegWrite do banco de registradores vem da FPULA ou do mux original implementado na ISA RV32I
+		  4'b0010:      wUcause <= ILLEGAL_INST;
+		  4'b0100:      wUcause <= LOAD_MISS;
+		  4'b0101:      wUcause <= LOAD_FAULT;
+		  4'b0110:      wUcause <= STORE_MISS;
+		  4'b0111:      wUcause <= STORE_FAULT;
+		  4'b1000:      wUcause <= CALL_FAIL;
+		  default:	    wUcause <= ZERO;
+		  endcase
+
+
+
+wire [31:0] wCSRDesalinhado;	 
+always @(*)
+    case(wDesalinhado) // Multiplexador que controla o que vai ser escrito em um registrador de ponto flutuante (origem memoria ou FPALU?)
+        1'b0:      wCSRDesalinhado <= wiPC;
+        1'b1:      wCSRDesalinhado <= wUTVECT;
+		  default:	 wCSRDesalinhado <= ZERO;
+    endcase 
+
+	
 `ifdef RV32IMF
 wire [31:0] wOrigAFPALU;
 always @(*)
@@ -361,10 +448,40 @@ always @(*)
 		  default:	 wWrite2Mem <= ZERO;
     endcase
 `endif
+/*		
+wire [3:0] wUcause;
+begin
+	   if (wWriteUcause == 4'b0010)
+			wUcause <= ILLEGAL_INST;
+			
+		if (wWriteUcause == 4'b0100)
+			wUcause <= LOAD_MISS;
+			
+		if (wWriteUcause == 4'b0101)
+			wUcause <= LOAD_FAULT;
+			
+		if (wWriteUcause == 4'b0110)
+			wUcause <= STORE_MISS;
 		
-
+		if (wWriteUcause == 4'b0111)
+			wUcause <= STORE_FAULT;
 		
+		if (wWriteUcause == 4'b1000)
+			wUcause <= CALL_FAIL;
+end
 
+
+
+wire [31:0] wCSRDesalinhado;	
+begin
+		if (wDesalinhado == 1'b0)
+			wCSRDesalinhado <= wiPC;
+			
+		if (wDesalinhado == 'b1)
+			wCSRDesalinhado <= wUTVECT;
+end
+		
+*/
 
 // ****************************************************** 
 // A cada ciclo de clock					  						 
@@ -407,9 +524,12 @@ always @(posedge iCLK or posedge iRST)
 			
 		if (wCEscrevePC || wBranch & wCEscrevePCCond)
 			PC	<= wiPC;	
+		
+		if (wUcause)
+			PC <= wUTVECT;
 
 	  end
-
+	   
 
 
 endmodule 
