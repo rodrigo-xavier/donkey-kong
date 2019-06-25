@@ -35,7 +35,7 @@ module Control_MULTI (
 	output          oWrite2Mem
 `endif
 
-
+	,
 	 output		  wWriteCSROrFPULA,
 	 input  [ 3:0]iDesalinhado,
 	 input  [ 3:0]wWriteUcause,
@@ -190,8 +190,10 @@ always @(*)
 					OPC_FSTORE: nx_state       <= ST_LWSW;
 `endif
 					default:
+						begin
 									nx_state 		<= ST_ERRO;
-									oWriteUcause  <= ILLEGAL_INST;
+									oWriteUcause   <= ILLEGAL_INST;
+						end
 				endcase		
 			end	
 
@@ -229,8 +231,10 @@ always @(*)
 					OPC_FSTORE: nx_state       <= ST_FSW;
 `endif
 					default:
+						begin
 									nx_state 		<= ST_ERRO;
-									oWriteUcause  <= ILLEGAL_INST;
+									oWriteUcause   <= ILLEGAL_INST;
+						end
 				endcase		
 			end	
 	
