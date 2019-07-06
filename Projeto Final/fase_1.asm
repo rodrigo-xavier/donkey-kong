@@ -1,6 +1,6 @@
 .data
 
-.include "fase1.s"
+.include "img/levels/fase_1/fase1.s"
 
 SEMFIM:
 

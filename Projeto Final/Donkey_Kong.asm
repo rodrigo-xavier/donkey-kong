@@ -4,11 +4,11 @@
 
 .data 
 
-.include "Donkey_kong.s"
-.include "Menu.s"
-.include "menu_1.s"
-.include "menu_2.s"
-.include "mario.s"
+.include "img/title/Donkey_kong.s"
+.include "img/menu/Menu.s"
+.include "img/menu/menu_1.s"
+.include "img/menu/menu_2.s"
+.include "img/mario/mario.s"
 #.include "fase_1.asm"
 New_Game: .string "NEW GAME"
 Controls: .string "CONTROLS"
