@@ -9,7 +9,7 @@
 .include "menu_1.s"
 .include "menu_2.s"
 .include "mario.s"
-#.include "fase_1.asm"
+.include "fase_1.asm"
 New_Game: .string "NEW GAME"
 Controls: .string "CONTROLS"
 EXIT:     .string "EXIT GAME"
@@ -106,8 +106,8 @@ LOOPMARIO: 	bge t1, t2, PAUSE		# Se for o �ltimo endere�o ent�o sai do loo
 
 
 PROXIMALINHAMARIO: 	addi t1, t1, 280
-		addi t4, t4, 320
-		j LOOPMARIO
+			addi t4, t4, 320
+			j LOOPMARIO
 		
 ################################################################
 
@@ -131,7 +131,6 @@ PROXIMALINHAM: 	addi t1, t1, 80
 
 
 ################################################################
-
 
 
 
@@ -184,7 +183,7 @@ READ:	li t1,0xFF00C83C		# endereco inicial da Memoria VGA 5622 				D509
 	# INFORMAÇÂO do TECLADO 
 	li a2, 119	# W
 	li a3, 115 	# S
-	li a4, 90	# ENTER
+	li a4, 10#90	# ENTER
 	
 	li a0, 0xFF200004
 	lw a1, 0(a0)
@@ -193,13 +192,13 @@ READ:	li t1,0xFF00C83C		# endereco inicial da Memoria VGA 5622 				D509
 	beq a1, a4, ENTRAR
 	ret
 
-ENTRAR:	#li  a1, 0
-	#beq a1, s0, FASE
+ENTRAR:	li  a1, 0
+	beq a1, s0, FASE
 	li  a1, 2
 	beq s0, a4, FIM
 	ret
 
-#FASE: call MAPA
+FASE:  MAPA
 
 DESCE: 		li a1, 2
 		beq a1, s0, PAUSE
