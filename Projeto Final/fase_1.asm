@@ -1,8 +1,9 @@
 
+.include "img/levels/fase_1/fase1.s"
 
-.include "fase1_nova.s"
-.include "Kong_final.s"
-.include "kong_1.s"
+.include "img/levels/fase_4/fase1_nova.s"
+.include "img/kong/Kong_final.s"
+.include "img/kong/kong_1.s"
 
 
 .macro MAPA

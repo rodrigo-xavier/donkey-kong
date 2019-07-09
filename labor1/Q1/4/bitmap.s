@@ -5,14 +5,14 @@
 #########################################################
 
 .data
-.include "eagles.s"
+.include "fase3.s"
 
 .text
 
 # Carrega a imagem
 li t1, 0xFF000000		# endereco inicial da Memoria VGA
 li t2, 0xFF012C00		# endereco final 
-la s1, eagles			# endere�o dos dados da tela na memoria
+la s1, fase3			# endere�o dos dados da tela na memoria
 addi s1, s1, 8			# primeiro pixels depois das informa��es de nlin ncol
 
 LOOP: 	beq t1, t2, FIM		# Se for o �ltimo endere�o ent�o sai do loop

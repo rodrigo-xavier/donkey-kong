@@ -9,7 +9,7 @@
 
 .data 
 
-.include "mario.s"
+.include "img/mario/mario.s"
 
 
 .text
