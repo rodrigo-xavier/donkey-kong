@@ -9,7 +9,7 @@
 .include "img/menu/menu_1.s"
 .include "img/menu/menu_2.s"
 .include "img/mario/mario.s"
-#.include "fase_1.asm"
+.include "fase_1.asm"
 New_Game: .string "NEW GAME"
 Controls: .string "CONTROLS"
 EXIT:     .string "EXIT GAME"
